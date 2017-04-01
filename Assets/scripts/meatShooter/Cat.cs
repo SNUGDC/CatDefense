@@ -2,9 +2,30 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
+public class CatResource
+{
+	public Sprite sprite;
+	public MeatSpecies meatSpecies;
+}
+
 public class Cat : MonoBehaviour {
 	
+	public List<CatResource> catResources;
+
 	public float speed = 0.03f;
+	private MeatSpecies meatSpecies;
+
+	/// <summary>
+	/// Awake is called when the script instance is being loaded.
+	/// </summary>
+	void Awake()
+	{
+		int randomIndex = Random.Range(0, catResources.Count);
+		CatResource catResource = catResources[randomIndex];
+		this.meatSpecies = catResource.meatSpecies;
+		this.GetComponent<SpriteRenderer>().sprite = catResource.sprite;
+	}
 	// Update is called once per frame
 	void Update () {
 		Transform target = MeatShooter.Instance.catGoalPoint;
