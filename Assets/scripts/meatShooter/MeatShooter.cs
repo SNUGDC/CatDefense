@@ -17,6 +17,7 @@ public class MeatShooter : MonoBehaviour, ShooterOutput {
 	public Transform catGoalPoint;
 	public SpriteRenderer meatRenderer;
 	public MeatShooterShooter shooter;
+	public MeatSelection selectedMeatShower;
 
 	private MeatSpecies? _meatSpecies;
 	public MeatSpecies? meatSpecies {
@@ -28,9 +29,11 @@ public class MeatShooter : MonoBehaviour, ShooterOutput {
 			if (_meatSpecies == null) {
 				meatRenderer.enabled = false;
 				shooter.enabled = false;
+				selectedMeatShower.meatSpecies = null;
 			} else {
 				meatRenderer.enabled = true;
 				shooter.enabled = true;
+				selectedMeatShower.meatSpecies = _meatSpecies;
 			}
 		}
 	}
