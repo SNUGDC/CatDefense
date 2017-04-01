@@ -18,22 +18,25 @@ public class MeatShooter : MonoBehaviour, ShooterOutput {
 	public SpriteRenderer meatRenderer;
 	public MeatShooterShooter shooter;
 	public MeatSelection selectedMeatShower;
+	public MeatSizeImage selectedMeatSize;
+    private MeatPeace _meatPeace;
 
-	private MeatSpecies? _meatSpecies;
-	public MeatSpecies? meatSpecies {
+    public MeatPeace meatPeace {
 		get {
-			return _meatSpecies;
+			return _meatPeace;
 		}
 		set {
-			_meatSpecies = value;
-			if (_meatSpecies == null) {
+			_meatPeace = value;
+			if (_meatPeace == null) {
 				meatRenderer.enabled = false;
 				shooter.enabled = false;
 				selectedMeatShower.meatSpecies = null;
+				selectedMeatSize.cuttingResult = null;
 			} else {
 				meatRenderer.enabled = true;
 				shooter.enabled = true;
-				selectedMeatShower.meatSpecies = _meatSpecies;
+				selectedMeatShower.meatSpecies = _meatPeace.meatSpecies;
+				selectedMeatSize.cuttingResult = _meatPeace.cuttingResult;
 			}
 		}
 	}
@@ -44,12 +47,12 @@ public class MeatShooter : MonoBehaviour, ShooterOutput {
 	void Awake()
 	{
 		Instance = this;
-		meatSpecies = null;
+		meatPeace = null;
 		shooter.shooterOutput = this;
 	}
 
     void ShooterOutput.OnShoot()
     {
-        this.meatSpecies = null;
+        this.meatPeace = null;
     }
 }

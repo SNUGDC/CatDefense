@@ -31,35 +31,6 @@ public class MeatSelection : MonoBehaviour
         }
     }
 
-    private CuttingResult? _cuttingResult;
-    public CuttingResult? cCuttingResult
-    {
-        get
-        {
-            return _cuttingResult;
-        }
-        set
-        {
-            _cuttingResult = value;
-            if (_cuttingResult == null)
-            {
-                return;
-            }
-            switch (_cuttingResult.Value)
-            {
-                case CuttingResult.BIG:
-                    transform.localScale = 1.3f * Vector3.one;
-                    break;
-                case CuttingResult.MIDDLE:
-                    transform.localScale = 1.0f * Vector3.one;
-                    break;
-                case CuttingResult.SMALL:
-                    transform.localScale = 0.7f * Vector3.one;
-                    break;
-            }
-        }
-    }
-
     private Sprite GetSprite(MeatSpecies meatSpecies)
     {
         switch (meatSpecies)

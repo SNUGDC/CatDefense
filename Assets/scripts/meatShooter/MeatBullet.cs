@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MeatPiece : MonoBehaviour {
+public class MeatBullet : MonoBehaviour {
 
 	public float speed;
 	public Vector3 direction;

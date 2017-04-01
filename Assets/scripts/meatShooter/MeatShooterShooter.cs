@@ -9,15 +9,15 @@ public interface ShooterOutput
 
 public class MeatShooterShooter : MonoBehaviour {
 
-	public MeatPiece meatPiece;
+	public MeatBullet meatPiece;
 	public ShooterOutput shooterOutput;
 	
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetKeyDown(KeyCode.Space))
 		{
-			MeatPiece newPiece = Instantiate(meatPiece, transform.position, Quaternion.identity) as MeatPiece;
-			newPiece.meatSpecies = MeatShooter.Instance.meatSpecies.Value;
+			MeatBullet newPiece = Instantiate(meatPiece, transform.position, Quaternion.identity) as MeatBullet;
+			newPiece.meatSpecies = MeatShooter.Instance.meatPeace.meatSpecies;
 			newPiece.transform.eulerAngles = transform.eulerAngles;
 			shooterOutput.OnShoot();
 		}
