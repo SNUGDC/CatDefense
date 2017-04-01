@@ -13,6 +13,8 @@ public class MeatShooter : MonoBehaviour {
 
 	public static MeatShooter Instance;
 
+	public Transform catGoalPoint;
+
 	/// <summary>
 	/// Awake is called when the script instance is being loaded.
 	/// </summary>
