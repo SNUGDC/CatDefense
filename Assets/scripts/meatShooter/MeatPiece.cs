@@ -6,6 +6,7 @@ public class MeatPiece : MonoBehaviour {
 
 	public float speed;
 	public Vector3 direction;
+	public MeatSpecies meatSpecies;
 
 	// Use this for initialization
 	void Start () {
