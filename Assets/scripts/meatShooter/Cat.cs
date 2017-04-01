@@ -44,7 +44,7 @@ public class Cat : MonoBehaviour
     /// <param name="other">The other Collider2D involved in this collision.</param>
     void OnTriggerEnter2D(Collider2D other)
     {
-        MeatPiece meatPiece = other.GetComponent<MeatPiece>();
+        MeatBullet meatPiece = other.GetComponent<MeatBullet>();
         MeatSpecies wantMeat = meatSpecies;
         MeatSpecies givenMeat = meatPiece.meatSpecies;
         if (wantMeat == givenMeat)
