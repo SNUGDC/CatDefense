@@ -18,6 +18,7 @@ public class MeatShooter : MonoBehaviour, ShooterOutput {
 	public SpriteRenderer meatRenderer;
 	public MeatShooterShooter shooter;
 	public MeatSelection selectedMeatShower;
+	public MeatSizeImage selectedMeatSize;
     private MeatPeace _meatPeace;
 
     public MeatPeace meatPeace {
@@ -30,10 +31,12 @@ public class MeatShooter : MonoBehaviour, ShooterOutput {
 				meatRenderer.enabled = false;
 				shooter.enabled = false;
 				selectedMeatShower.meatSpecies = null;
+				selectedMeatSize.cuttingResult = null;
 			} else {
 				meatRenderer.enabled = true;
 				shooter.enabled = true;
 				selectedMeatShower.meatSpecies = _meatPeace.meatSpecies;
+				selectedMeatSize.cuttingResult = _meatPeace.cuttingResult;
 			}
 		}
 	}
