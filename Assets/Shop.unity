@@ -358,6 +358,7 @@ GameObject:
   - component: {fileID: 73315096}
   - component: {fileID: 73315098}
   - component: {fileID: 73315097}
+  - component: {fileID: 73315099}
   m_Layer: 5
   m_Name: Price
   m_TagString: Untagged
@@ -402,7 +403,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 19ed56a5f8cf048479b0f72da1ca9c5f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6fdc098c26d27cd45b9342693c147178, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -416,6 +417,58 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 73315095}
+--- !u!114 &73315099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 73315095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 73315097}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1655627592}
+        m_MethodName: BuyUpgrade
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &93548131
 GameObject:
   m_ObjectHideFlags: 0
@@ -1928,6 +1981,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24dd9a7800c7b054884e235030617918, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CheckMark:
+  - {fileID: 93548131}
+  - {fileID: 362346199}
+  - {fileID: 1833922671}
+  - {fileID: 195898870}
+  - {fileID: 227778838}
+  PriceImages:
+  - {fileID: 21300000, guid: 8350ad22bfc0a3442a6e49dc5e3aa189, type: 3}
+  - {fileID: 21300000, guid: 76350ca24bc55c64389b80ad7a7c38e2, type: 3}
+  - {fileID: 21300000, guid: 04edf0f314b040643a8047a909dd34a0, type: 3}
+  - {fileID: 21300000, guid: 6fdc098c26d27cd45b9342693c147178, type: 3}
+  - {fileID: 21300000, guid: 3de78fe7e79ecbe48a354fca24662958, type: 3}
+  - {fileID: 21300000, guid: 6ba9fd60045330640a465cfd155c9bd5, type: 3}
+  - {fileID: 21300000, guid: e3741569ac210f342aca217cef556199, type: 3}
+  - {fileID: 21300000, guid: bc40c9cabadaa714f80765fd8ea656ac, type: 3}
+  - {fileID: 21300000, guid: a565c23a2b5deb2499c6fc9839f47eb4, type: 3}
+  - {fileID: 21300000, guid: 8ce7f004fdc7c7a4699873fcd98b4557, type: 3}
+  - {fileID: 21300000, guid: 12acbbad64c70454099ac26c4e59219c, type: 3}
+  - {fileID: 21300000, guid: 39193d69247d9b745b5fcc6fe8e0cdba, type: 3}
+  - {fileID: 21300000, guid: 49ceb561b91f78d468f740fb1f8f2605, type: 3}
+  - {fileID: 21300000, guid: 07877660991688847bf803e7bccdd0da, type: 3}
+  - {fileID: 21300000, guid: 16683fa06186c1e4f959758baac19cfb, type: 3}
+  - {fileID: 21300000, guid: c3a3ccd07348b544d85465d0d97d0537, type: 3}
+  - {fileID: 21300000, guid: a38bfdf02adf7534b9657f7c155bb13a, type: 3}
+  - {fileID: 21300000, guid: 30f369f023e4fd3469ff0b51861c10ee, type: 3}
   Name: {fileID: 63400154}
   BigIcon: {fileID: 683008246}
   Price: {fileID: 73315097}
@@ -1952,6 +2030,13 @@ MonoBehaviour:
   - UpgradeBigIcon: {fileID: 21300000, guid: 478927088194cbd489c6244cad1ffafe, type: 3}
     UpgradeName: {fileID: 21300000, guid: 605fb898152ea4d44b2907f3e3339a96, type: 3}
     UpgradeInfo: {fileID: 21300000, guid: 01c4b5dfd9289a74ea188e26ff531281, type: 3}
+  UpgradePrices:
+  - PriceImage: 0100000002000000030000000500000007000000
+  - PriceImage: 0300000005000000080000000a0000000d000000
+  - PriceImage: 0200000004000000060000000700000008000000
+  - PriceImage: 0500000007000000090000000d00000010000000
+  - PriceImage: 030000000500000007000000090000000c000000
+  - PriceImage: 0200000003000000040000000600000009000000
 --- !u!4 &1655627593
 Transform:
   m_ObjectHideFlags: 0
