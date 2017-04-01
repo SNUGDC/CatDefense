@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [System.Serializable]
 public class CatResource
@@ -46,6 +47,7 @@ public class Cat : MonoBehaviour
 
         if (transform.position.y < MeatShooter.Instance.catDieLine.position.y) {
             Debug.LogError("Game Over");
+            SceneManager.LoadScene("Start");
         }
     }
 
