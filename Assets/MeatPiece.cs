@@ -16,6 +16,5 @@ public class MeatPiece : MonoBehaviour {
 	void Update () {
 		Vector3 greenDir = transform.up;
 		transform.position += speed * greenDir;
-		// transform.position += new Vector3(0, speed, 0);
 	}
 }
