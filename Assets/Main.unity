@@ -698,6 +698,7 @@ GameObject:
   - component: {fileID: 1083443505}
   - component: {fileID: 1083443506}
   - component: {fileID: 1083443507}
+  - component: {fileID: 1083443508}
   m_Layer: 0
   m_Name: meatOnDoma
   m_TagString: Untagged
@@ -716,7 +717,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1498540435}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1083443506
 SpriteRenderer:
@@ -765,6 +766,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 1083443506}
+--- !u!114 &1083443508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1083443504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50280eb31950940ef8ac11b71a7f5f0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sheep: {fileID: 21300000, guid: 53356caf3fedf8d42aae78f1dfe4a7cd, type: 3}
+  duck: {fileID: 21300000, guid: 388713dd0c927e240b3820bdf4d3c852, type: 3}
+  salmon: {fileID: 21300000, guid: 3569098a40c5a244f9815c936a426211, type: 3}
+  cow: {fileID: 21300000, guid: 7b8263b2b0540e94c8b7d1af91d5a639, type: 3}
+  chicken: {fileID: 21300000, guid: 6a98273a8d8f8f24b917202eb11382af, type: 3}
 --- !u!1 &1095946144
 GameObject:
   m_ObjectHideFlags: 0
@@ -1221,7 +1238,6 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 2027386145}
   - {fileID: 1083443505}
   m_Father: {fileID: 1554322451}
   m_RootOrder: 1
@@ -1237,7 +1253,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a7347b7896a442f5854117161881ad8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  meatSelection: {fileID: 2027386146}
+  meatSelection: {fileID: 1083443508}
   meatOnDoma: {fileID: 1083443507}
   knifeCutting: {fileID: 1217606956}
 --- !u!1 &1530209053
@@ -1634,87 +1650,6 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 0f94e147f122e1248a2c3ffd76684c3b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
---- !u!1 &2027386144
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 2027386145}
-  - component: {fileID: 2027386146}
-  - component: {fileID: 2027386147}
-  m_Layer: 0
-  m_Name: selectedMeat
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2027386145
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2027386144}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.93, y: 1.29, z: -3}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1498540435}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2027386146
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2027386144}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50280eb31950940ef8ac11b71a7f5f0e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sheep: {fileID: 21300000, guid: 0635ae5d2c8124a36b2e6af88f6dbd42, type: 3}
-  duck: {fileID: 21300000, guid: d7612e289342545f18318de5d4b6a440, type: 3}
-  salmon: {fileID: 21300000, guid: 858a90059fa1f40b3b79b33c4ad0f07e, type: 3}
-  cow: {fileID: 21300000, guid: ced193d8e74bf400793ac96aa46af78d, type: 3}
-  chicken: {fileID: 21300000, guid: 51348b4510c974de987acf3f83b1caf8, type: 3}
---- !u!212 &2027386147
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2027386144}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 0
-  m_ReflectionProbeUsage: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 51348b4510c974de987acf3f83b1caf8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
