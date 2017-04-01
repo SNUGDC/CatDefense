@@ -3,6 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public interface KnifeCuttingOut {
+	void OnCut(CuttingResult cuttingResult);
+}
+
 public class KnifeCutting : MonoBehaviour {
 
 	public Transform bigLimit;
@@ -13,6 +17,8 @@ public class KnifeCutting : MonoBehaviour {
 
 	public Transform knife;
 
+	public KnifeCuttingOut cuttingEventOut;
+
 	/// <summary>
 	/// Update is called every frame, if the MonoBehaviour is enabled.
 	/// </summary>
@@ -21,7 +27,7 @@ public class KnifeCutting : MonoBehaviour {
 		if (Input.GetKeyUp(KeyCode.Space))
 		{
 			CuttingResult cuttingResult = Cut();
-			Debug.Log("Cutting result is " + cuttingResult);
+			cuttingEventOut.OnCut(cuttingResult);
 		}
 	}
 

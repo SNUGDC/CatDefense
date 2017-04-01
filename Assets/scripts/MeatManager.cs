@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MeatManager : MonoBehaviour
+public class MeatManager : MonoBehaviour, KnifeCuttingOut
 {
     public MeatSelection meatSelection;
     public MeatOnDoma meatOnDoma;
@@ -28,6 +28,16 @@ public class MeatManager : MonoBehaviour
             }
         }
     }
+
+	public KnifeCutting knifeCutting;
+
+	/// <summary>
+	/// Awake is called when the script instance is being loaded.
+	/// </summary>
+	void Awake()
+	{
+		knifeCutting.cuttingEventOut = this;
+	}
 
     /// <summary>
     /// Start is called on the frame when a script is enabled just before
@@ -70,5 +80,14 @@ public class MeatManager : MonoBehaviour
             return MeatSpecies.Chicken;
         }
         return null;
+    }
+
+    void KnifeCuttingOut.OnCut(CuttingResult cuttingResult)
+    {
+        if (meatSpecies == null) {
+			return;
+		} else {
+			Debug.Log("Cut " + cuttingResult + ", " + meatSpecies);
+		}
     }
 }
