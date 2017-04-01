@@ -43,6 +43,10 @@ public class Cat : MonoBehaviour
         Transform target = MeatShooter.Instance.catGoalPoint;
         Vector3 direction = (target.position - transform.position).normalized;
         transform.position += direction * speed;
+
+        if (transform.position.y < MeatShooter.Instance.catDieLine.position.y) {
+            Debug.LogError("Game Over");
+        }
     }
 
     /// <summary>

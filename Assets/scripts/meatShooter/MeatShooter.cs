@@ -15,6 +15,7 @@ public class MeatShooter : MonoBehaviour, ShooterOutput {
 	public static MeatShooter Instance;
 
 	public Transform catGoalPoint;
+	public Transform catDieLine;
 	public SpriteRenderer meatRenderer;
 	public MeatShooterShooter shooter;
 	public MeatSelection selectedMeatShower;
