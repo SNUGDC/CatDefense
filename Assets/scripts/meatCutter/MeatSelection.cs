@@ -52,6 +52,7 @@ public class MeatSelection : MonoBehaviour {
 	/// </summary>
 	void Awake()
 	{
-		meatSpecies = null;
+		// trigger setter
+		meatSpecies = meatSpecies;
 	}
 }

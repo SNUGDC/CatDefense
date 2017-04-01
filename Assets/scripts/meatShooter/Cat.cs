@@ -12,6 +12,7 @@ public class CatResource
 public class Cat : MonoBehaviour {
 	
 	public List<CatResource> catResources;
+	public MeatSelection favorite;
 
 	public float speed = 0.03f;
 	private MeatSpecies meatSpecies;
@@ -24,6 +25,7 @@ public class Cat : MonoBehaviour {
 		int randomIndex = Random.Range(0, catResources.Count);
 		CatResource catResource = catResources[randomIndex];
 		this.meatSpecies = catResource.meatSpecies;
+		favorite.meatSpecies = this.meatSpecies;
 		this.GetComponent<SpriteRenderer>().sprite = catResource.sprite;
 	}
 	// Update is called once per frame
