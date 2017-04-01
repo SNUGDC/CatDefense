@@ -88,6 +88,7 @@ public class MeatManager : MonoBehaviour, KnifeCuttingOut
 			return;
 		} else {
 			Debug.Log("Cut " + cuttingResult + ", " + meatSpecies);
+            MeatShooter.Instance.meatSpecies = meatSpecies;
 			meatSpecies = null;
 		}
     }
