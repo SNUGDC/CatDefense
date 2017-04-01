@@ -7,6 +7,7 @@ public class MeatBullet : MonoBehaviour {
 	public float speed;
 	public Vector3 direction;
 	public MeatSpecies meatSpecies;
+	public CuttingResult meatSize;
 
 	// Use this for initialization
 	void Start () {

@@ -55,7 +55,9 @@ public class Cat : MonoBehaviour
         MeatBullet meatPiece = other.GetComponent<MeatBullet>();
         MeatSpecies wantMeat = meatSpecies;
         MeatSpecies givenMeat = meatPiece.meatSpecies;
-        if (wantMeat == givenMeat)
+        CuttingResult wantSize = meatSize;
+        CuttingResult givenSize = meatPiece.meatSize;
+        if (wantMeat == givenMeat && wantSize == givenSize)
         {
             Destroy(other.gameObject);
             Destroy(gameObject);
@@ -63,6 +65,7 @@ public class Cat : MonoBehaviour
         else
         {
 			Debug.Log("Different meat want : " + wantMeat + " given : " + givenMeat);
+            Debug.Log("Different meat size want : " + wantSize + " given : " + givenSize);
 			Destroy(other.gameObject);
         }
     }

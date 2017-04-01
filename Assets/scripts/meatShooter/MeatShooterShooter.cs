@@ -18,6 +18,7 @@ public class MeatShooterShooter : MonoBehaviour {
 		{
 			MeatBullet newPiece = Instantiate(meatPiece, transform.position, Quaternion.identity) as MeatBullet;
 			newPiece.meatSpecies = MeatShooter.Instance.meatPeace.meatSpecies;
+			newPiece.meatSize = MeatShooter.Instance.meatPeace.cuttingResult;
 			newPiece.transform.eulerAngles = transform.eulerAngles;
 			shooterOutput.OnShoot();
 		}
