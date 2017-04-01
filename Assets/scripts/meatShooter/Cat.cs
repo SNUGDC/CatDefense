@@ -14,9 +14,11 @@ public class Cat : MonoBehaviour
 
     public List<CatResource> catResources;
     public MeatSelection favorite;
+	public MeatSizeImage meatSizeImage;
 
     public float speed = 0.03f;
     public MeatSpecies meatSpecies;
+	public CuttingResult meatSize;
 
     /// <summary>
     /// Awake is called when the script instance is being loaded.
@@ -28,6 +30,12 @@ public class Cat : MonoBehaviour
         this.meatSpecies = catResource.meatSpecies;
         favorite.meatSpecies = this.meatSpecies;
         this.GetComponent<SpriteRenderer>().sprite = catResource.sprite;
+
+		List<CuttingResult> allCuttingResults = new List<CuttingResult> {
+			CuttingResult.BIG, CuttingResult.MIDDLE, CuttingResult.SMALL
+		};
+		this.meatSize = allCuttingResults[Random.Range(0, allCuttingResults.Count)];
+		meatSizeImage.cuttingResult = this.meatSize;
     }
     // Update is called once per frame
     void Update()
