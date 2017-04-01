@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 50280eb31950940ef8ac11b71a7f5f0e
+timeCreated: 1491036016
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - sheep: {fileID: 21300000, guid: 0635ae5d2c8124a36b2e6af88f6dbd42, type: 3}
+  - duck: {fileID: 21300000, guid: d7612e289342545f18318de5d4b6a440, type: 3}
+  - salmon: {fileID: 21300000, guid: 858a90059fa1f40b3b79b33c4ad0f07e, type: 3}
+  - cow: {fileID: 21300000, guid: ced193d8e74bf400793ac96aa46af78d, type: 3}
+  - chicken: {fileID: 21300000, guid: 51348b4510c974de987acf3f83b1caf8, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
