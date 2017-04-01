@@ -59,23 +59,23 @@ public class MeatManager : MonoBehaviour, KnifeCuttingOut
 
     private static MeatSpecies? SelectMeat()
     {
-        if (Input.GetKeyUp(KeyCode.Q))
+        if (Input.GetKeyUp(KeyCode.W))
         {
             return MeatSpecies.Sheep;
         }
-        else if (Input.GetKeyUp(KeyCode.E))
+        else if (Input.GetKeyUp(KeyCode.D))
         {
             return MeatSpecies.Duck;
         }
-        else if (Input.GetKeyUp(KeyCode.A))
+        else if (Input.GetKeyUp(KeyCode.Q))
         {
             return MeatSpecies.Salmon;
         }
-        else if (Input.GetKeyUp(KeyCode.S))
+        else if (Input.GetKeyUp(KeyCode.A))
         {
             return MeatSpecies.Cow;
         }
-        else if (Input.GetKeyUp(KeyCode.D))
+        else if (Input.GetKeyUp(KeyCode.S))
         {
             return MeatSpecies.Chicken;
         }
