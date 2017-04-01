@@ -19,6 +19,7 @@ public class Cat : MonoBehaviour {
 	/// <param name="other">The other Collider2D involved in this collision.</param>
 	void OnTriggerEnter2D(Collider2D other)
 	{
-		Debug.LogError("Trigger with " + other);
+		Destroy(other.gameObject);
+		Destroy(gameObject);
 	}
 }

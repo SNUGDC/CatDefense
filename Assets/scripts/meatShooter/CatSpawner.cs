@@ -32,6 +32,8 @@ public class CatSpawner : MonoBehaviour
 			yield return new WaitForSeconds(coolTime);
 			remainTime -= coolTime;
         }
+
+		Debug.Log("Wave end");
     }
 
     private void SpawnCat()
