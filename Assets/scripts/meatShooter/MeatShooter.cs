@@ -1,8 +1,9 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MeatShooter : MonoBehaviour {
+public class MeatShooter : MonoBehaviour, ShooterOutput {
 	private int currentWaveNum = 0;
 
 	public WaveStat CurrentWave {
@@ -14,6 +15,25 @@ public class MeatShooter : MonoBehaviour {
 	public static MeatShooter Instance;
 
 	public Transform catGoalPoint;
+	public SpriteRenderer meatRenderer;
+	public MeatShooterShooter shooter;
+
+	private MeatSpecies? _meatSpecies;
+	public MeatSpecies? meatSpecies {
+		get {
+			return _meatSpecies;
+		}
+		set {
+			_meatSpecies = value;
+			if (_meatSpecies == null) {
+				meatRenderer.enabled = false;
+				shooter.enabled = false;
+			} else {
+				meatRenderer.enabled = true;
+				shooter.enabled = true;
+			}
+		}
+	}
 
 	/// <summary>
 	/// Awake is called when the script instance is being loaded.
@@ -21,5 +41,12 @@ public class MeatShooter : MonoBehaviour {
 	void Awake()
 	{
 		Instance = this;
+		meatSpecies = null;
+		shooter.shooterOutput = this;
 	}
+
+    void ShooterOutput.OnShoot()
+    {
+        this.meatSpecies = null;
+    }
 }

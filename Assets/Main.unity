@@ -621,8 +621,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 372a38972e8f541eeaba66530bdffe1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WaveTime: 10
-  FeverTime: 5
+  WaveTime: 20
+  FeverTime: 10
 --- !u!1 &1083443504
 GameObject:
   m_ObjectHideFlags: 0
@@ -1501,3 +1501,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   catGoalPoint: {fileID: 44778146}
+  meatRenderer: {fileID: 641643969}
+  shooter: {fileID: 686265584}

@@ -2,14 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public interface ShooterOutput
+{
+	void OnShoot();
+}
+
 public class MeatShooterShooter : MonoBehaviour {
 
 	public GameObject meatPiece;
-
-	// Use this for initialization
-	void Start () {
-
-	}
+	public ShooterOutput shooterOutput;
 	
 	// Update is called once per frame
 	void Update () {
@@ -17,6 +18,7 @@ public class MeatShooterShooter : MonoBehaviour {
 		{
 			GameObject newPiece = Instantiate(meatPiece, transform.position, Quaternion.identity) as GameObject;	
 			newPiece.transform.eulerAngles = transform.eulerAngles;
+			shooterOutput.OnShoot();
 		}
 	}
 }
