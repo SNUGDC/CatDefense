@@ -16,4 +16,9 @@ public class UpgradeApplier : MonoBehaviour {
 	{
 		return 1.0f + 0.2f * (float)GlobalInfo.Instance.GetKnifeUpgradeLevel();
 	}
+
+	public float GetPerfectJudgementAreaAdded()
+	{
+		return 0.1f * GlobalInfo.Instance.GetJudgementUpgradeLevel();
+	}
 }

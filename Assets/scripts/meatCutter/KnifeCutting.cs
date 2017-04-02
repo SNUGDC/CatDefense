@@ -88,7 +88,9 @@ public class KnifeCutting : MonoBehaviour
 		float diff = Mathf.Abs(middle - value);
 		float diffRatio = diff / (length / 2);
 
-		float perfectRatio = Configurations.Instance.PerfectRatio;
+		float defaultPerfectRatio = Configurations.Instance.PerfectRatio;
+        float perfectUpgrade = UpgradeApplier.Instance.GetPerfectJudgementAreaAdded();
+        float perfectRatio = defaultPerfectRatio + perfectUpgrade;
 		if (diffRatio < perfectRatio)
 		{
 			return CuttingJudgement.Perfect;
