@@ -52,8 +52,10 @@ public class MeatManager : MonoBehaviour, KnifeCuttingOut
     void Update()
     {
         MeatSpecies? selectedMeat = SelectMeat();
-        if (selectedMeat != null)
+        int meatPrice = Configurations.Instance.meatPrice;
+        if (selectedMeat != null && GlobalInfo.Instance.money >= meatPrice)
         {
+            GlobalInfo.Instance.money -= meatPrice;
             meatSpecies = selectedMeat;
         }
     }

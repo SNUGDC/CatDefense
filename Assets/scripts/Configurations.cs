@@ -12,6 +12,8 @@ public class Configurations : MonoBehaviour {
 	public float PerfectReward = 1.3f;
 	public float BadReward = 0.7f;
 
+	public int meatPrice = 5;
+
 	public static Configurations Instance;
 
 	/// <summary>
