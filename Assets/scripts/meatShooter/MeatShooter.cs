@@ -86,6 +86,6 @@ public class MeatShooter : MonoBehaviour, ShooterOutput, WaveTimeOut {
     void WaveTimeOut.OnWaveEnd()
     {
 		GlobalInfo.Instance.currentWave += 1;
-		SceneManager.LoadScene("Shop");
+		BackgroundMusic.FadeOutAndChangeScene("Shop");
     }
 }
