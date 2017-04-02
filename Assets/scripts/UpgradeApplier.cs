@@ -21,4 +21,9 @@ public class UpgradeApplier : MonoBehaviour {
 	{
 		return 0.1f * GlobalInfo.Instance.GetJudgementUpgradeLevel();
 	}
+
+	public float GetCalMovementSlowMultiplier()
+	{
+		return 1.0f - 0.1f * GlobalInfo.Instance.GetCatSlowUpgradeLevel();
+	}
 }
