@@ -21,6 +21,8 @@ public class KnifeCutting : MonoBehaviour, IGameEndReceiver
 
     public KnifeCuttingOut cuttingEventOut;
 
+    public CutEffect cutEffect;
+
     /// <summary>
     /// Update is called every frame, if the MonoBehaviour is enabled.
     /// </summary>
@@ -30,6 +32,7 @@ public class KnifeCutting : MonoBehaviour, IGameEndReceiver
         {
             CuttingResult cuttingResult = Cut();
             cuttingEventOut.OnCut(cuttingResult);
+            cutEffect.Show();
         }
     }
 
