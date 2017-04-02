@@ -52,7 +52,9 @@ public class MeatManager : MonoBehaviour, KnifeCuttingOut
     void Update()
     {
         MeatSpecies? selectedMeat = SelectMeat();
-        int meatPrice = Configurations.Instance.meatPrice;
+        int defaultMeatPrice = Configurations.Instance.meatPrice;
+        float discountRatio = UpgradeApplier.Instance.GetMeatPriceMultiplier();
+        int meatPrice = (int)((float)defaultMeatPrice * discountRatio);
         if (selectedMeat != null && GlobalInfo.Instance.money >= meatPrice)
         {
             GlobalInfo.Instance.money -= meatPrice;

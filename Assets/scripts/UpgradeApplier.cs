@@ -36,4 +36,9 @@ public class UpgradeApplier : MonoBehaviour {
 	{
 		return 0.05f * GlobalInfo.Instance.GetBadPanelyUpgradeLevel();
 	}
+
+	public float GetMeatPriceMultiplier()
+	{
+		return 1.0f - 0.1f * GlobalInfo.Instance.GetMeatPriceUpgradeLevel();
+	}
 }
