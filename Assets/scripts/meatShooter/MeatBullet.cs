@@ -2,21 +2,38 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MeatBullet : MonoBehaviour {
+public class MeatBullet : MonoBehaviour
+{
 
-	public float speed;
-	public Vector3 direction;
-	public MeatSpecies meatSpecies;
-	public CuttingResult meatSize;
+    public float speed;
+    public Vector3 direction;
 
-	// Use this for initialization
-	void Start () {
-		
+    private MeatPeace meatPeace;
+    public MeatSpecies meatSpecies
+    {
+        get
+        {
+            return meatPeace.meatSpecies;
+        }
+    }
+    public CuttingResult meatSize
+    {
+        get
+        {
+            return meatPeace.cuttingResult;
+        }
+    }
+
+	public void SetMeatPeace(MeatPeace meatPeace)
+	{
+		this.meatPeace = meatPeace;
+		GetComponent<MeatPeaceSelector>().meatPeace = meatPeace;
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		Vector3 greenDir = transform.up;
-		transform.position += speed * greenDir;
-	}
+
+    // Update is called once per frame
+    void Update()
+    {
+        Vector3 greenDir = transform.up;
+        transform.position += speed * greenDir;
+    }
 }

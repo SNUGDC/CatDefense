@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 114890541215750626}
   - component: {fileID: 50437127787580298}
   - component: {fileID: 61669099708926938}
+  - component: {fileID: 114993150954382682}
   m_Layer: 9
   m_Name: meat
   m_TagString: Untagged
@@ -90,6 +91,39 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.1
   direction: {x: 0, y: 0, z: 0}
+  meatSpecies: 0
+  meatSize: 0
+--- !u!114 &114993150954382682
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1843230442531422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9e45b3b01418436499d0fb23fd24535, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chickenResource:
+    big: {fileID: 21300000, guid: f029701ff63c65649b9cd69ad7c9b317, type: 3}
+    middle: {fileID: 21300000, guid: 13aabed9c297a9044beca6dd94284e0e, type: 3}
+    small: {fileID: 21300000, guid: 230e865a979f100499e5a16526b9d66d, type: 3}
+  duckResource:
+    big: {fileID: 21300000, guid: 9eec1ec286123d848a0b450578dba4f6, type: 3}
+    middle: {fileID: 21300000, guid: 0d05e353ec007a646a5825cd09df87c0, type: 3}
+    small: {fileID: 21300000, guid: ff7e8c1d07a6b3f45bb18e17318643d8, type: 3}
+  salmonResource:
+    big: {fileID: 21300000, guid: da93acdb5afbce24691bcc751382c9b5, type: 3}
+    middle: {fileID: 21300000, guid: 54157a991f6245f4999668672880c98c, type: 3}
+    small: {fileID: 21300000, guid: 1daba347254789d4c88ebe465215336b, type: 3}
+  cowResource:
+    big: {fileID: 21300000, guid: f2f64d2a4ec98c044b8b5bfe8445ff3a, type: 3}
+    middle: {fileID: 21300000, guid: 019bbfdfe5944bc478eb6a94d3f57dcc, type: 3}
+    small: {fileID: 21300000, guid: bbc9c8cba406a7f419aa76ae8c4699bb, type: 3}
+  lambResource:
+    big: {fileID: 21300000, guid: bcc69ee6587a8fc49a75854520abd2c8, type: 3}
+    middle: {fileID: 21300000, guid: 016a60725a48d2c4ca01ff402844e9ff, type: 3}
+    small: {fileID: 21300000, guid: 654bd5d3733ea77408202d2d168c5a3a, type: 3}
 --- !u!212 &212225529039466018
 SpriteRenderer:
   m_ObjectHideFlags: 1
