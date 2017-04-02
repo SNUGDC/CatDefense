@@ -1,6 +1,5 @@
-﻿public enum CuttingResult
+﻿public class CuttingResult
 {
-	BIG,
-	MIDDLE,
-	SMALL
+	public CuttingSize size;
+	public CuttingJudgement judgement;
 }

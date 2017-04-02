@@ -82,7 +82,7 @@ public class MeatManager : MonoBehaviour, KnifeCuttingOut
         return null;
     }
 
-    void KnifeCuttingOut.OnCut(CuttingResult cuttingResult)
+    void KnifeCuttingOut.OnCut(CuttingSize cuttingResult)
     {
         if (meatSpecies == null) {
 			return;

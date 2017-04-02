@@ -16,7 +16,7 @@ public class MeatBullet : MonoBehaviour
             return meatPiece.meatSpecies;
         }
     }
-    public CuttingResult meatSize
+    public CuttingSize meatSize
     {
         get
         {
