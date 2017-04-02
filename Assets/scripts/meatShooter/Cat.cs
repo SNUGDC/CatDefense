@@ -10,7 +10,7 @@ public class CatResource
     public MeatSpecies meatSpecies;
 }
 
-public class Cat : MonoBehaviour
+public class Cat : MonoBehaviour, IGameEndReceiver
 {
 
     public List<CatResource> catResources;
@@ -64,7 +64,7 @@ public class Cat : MonoBehaviour
 
         if (transform.position.y < MeatShooter.Instance.catDieLine.position.y) {
             Debug.LogError("Game Over");
-			BackgroundMusic.FadeOutAndChangeScene("Start");
+            GameEnd.Instance.Fail();
         }
     }
 

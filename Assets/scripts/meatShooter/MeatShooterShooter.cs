@@ -7,7 +7,7 @@ public interface ShooterOutput
 	void OnShoot();
 }
 
-public class MeatShooterShooter : MonoBehaviour {
+public class MeatShooterShooter : MonoBehaviour, IGameEndReceiver {
 
 	public MeatBullet meatPiece;
 	public ShooterOutput shooterOutput;

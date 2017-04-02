@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MeatManager : MonoBehaviour, KnifeCuttingOut
+public class MeatManager : MonoBehaviour, KnifeCuttingOut, IGameEndReceiver
 {
     public MeatSelection meatSelection;
     public MeatOnDoma meatOnDoma;

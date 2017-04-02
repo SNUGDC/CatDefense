@@ -16,7 +16,7 @@ public interface WaveTimeInput
 }
 
 
-public class WaveTime : MonoBehaviour, WaveTimeInput
+public class WaveTime : MonoBehaviour, WaveTimeInput, IGameEndReceiver
 {
     public static WaveTime Instance;
     /// <summary>

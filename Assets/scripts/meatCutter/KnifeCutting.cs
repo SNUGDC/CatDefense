@@ -8,7 +8,7 @@ public interface KnifeCuttingOut
     void OnCut(CuttingResult cuttingResult);
 }
 
-public class KnifeCutting : MonoBehaviour
+public class KnifeCutting : MonoBehaviour, IGameEndReceiver
 {
 
     public Transform bigLimit;
