@@ -16,7 +16,7 @@ public class WaveDB : MonoBehaviour {
 	}
 
 	public WaveStat Get(int waveNum) {
-		if (waveStats.Count >= waveNum) {
+		if (waveStats.Count <= waveNum) {
 			return waveStats.Last();
 		}
 		return waveStats[waveNum];
