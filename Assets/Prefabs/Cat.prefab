@@ -55,7 +55,7 @@ GameObject:
   - component: {fileID: 212105202449654440}
   - component: {fileID: 114692006861690040}
   - component: {fileID: 50640427624268758}
-  - component: {fileID: 61615395997444388}
+  - component: {fileID: 61489490012785720}
   m_Layer: 8
   m_Name: Cat
   m_TagString: Untagged
@@ -155,7 +155,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &61615395997444388
+--- !u!61 &61489490012785720
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -166,9 +166,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.055411935, y: 0.19394189}
   serializedVersion: 2
-  m_Size: {x: 1.5, y: 1.8}
+  m_Size: {x: 0.7809373, y: 0.24658144}
 --- !u!114 &114500977782299102
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -227,7 +227,7 @@ MonoBehaviour:
     meatSpecies: 1
   favorite: {fileID: 114512957585944658}
   meatSizeImage: {fileID: 114500977782299102}
-  speed: 0.02
+  speed: 0.03
   meatSpecies: 0
   meatSize: 0
 --- !u!212 &212007820319408316
