@@ -63,6 +63,13 @@ public class GameEnd : MonoBehaviour
                 gameendReceiver.OnGameEnd();				
 			}
         }
+
+
+        //dirty method
+        var waveTime = FindObjectOfType<WaveTime>();
+        if (waveTime) {
+            Destroy(waveTime);
+        }
     }
   
 }

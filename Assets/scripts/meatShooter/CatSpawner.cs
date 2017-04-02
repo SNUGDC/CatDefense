@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CatSpawner : MonoBehaviour, WaveTimeOut
+public class CatSpawner : MonoBehaviour, WaveTimeOut, IGameEndReceiver
 {
     public Transform left;
     public Transform right;
