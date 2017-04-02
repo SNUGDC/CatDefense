@@ -498,6 +498,47 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 124287053}
   m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+--- !u!1 &125655127
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 125655128}
+  - component: {fileID: 125655129}
+  m_Layer: 0
+  m_Name: Cats
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &125655128
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 125655127}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 626582156}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &125655129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 125655127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bd7010b2ea244ea88089fd6b2edf763, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cats: []
 --- !u!1 &346120294
 GameObject:
   m_ObjectHideFlags: 0
@@ -535,6 +576,7 @@ GameObject:
   m_Component:
   - component: {fileID: 350336034}
   - component: {fileID: 350336035}
+  - component: {fileID: 350336036}
   m_Layer: 0
   m_Name: Chicken
   m_TagString: Untagged
@@ -590,6 +632,19 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!114 &350336036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 350336033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd3bbaf99580f41fbafd9d0c99698911, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  species: 4
+  highlightColor: {r: 0.9862069, g: 1, b: 0, a: 1}
 --- !u!1 &455544222
 GameObject:
   m_ObjectHideFlags: 0
@@ -836,6 +891,7 @@ Transform:
   - {fileID: 1051255200}
   - {fileID: 806026948}
   - {fileID: 1790562380}
+  - {fileID: 125655128}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1948,6 +2004,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1262511932}
   - component: {fileID: 1262511933}
+  - component: {fileID: 1262511934}
   m_Layer: 0
   m_Name: Salmon
   m_TagString: Untagged
@@ -2003,6 +2060,19 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!114 &1262511934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1262511931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd3bbaf99580f41fbafd9d0c99698911, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  species: 2
+  highlightColor: {r: 0.9862069, g: 1, b: 0, a: 1}
 --- !u!1 &1324162177
 GameObject:
   m_ObjectHideFlags: 0
@@ -2012,6 +2082,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1324162178}
   - component: {fileID: 1324162179}
+  - component: {fileID: 1324162180}
   m_Layer: 0
   m_Name: Lamb
   m_TagString: Untagged
@@ -2067,6 +2138,19 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!114 &1324162180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1324162177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd3bbaf99580f41fbafd9d0c99698911, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  species: 0
+  highlightColor: {r: 0.9862069, g: 1, b: 0, a: 1}
 --- !u!1 &1331925982
 GameObject:
   m_ObjectHideFlags: 0
@@ -2244,6 +2328,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1545832878}
   - component: {fileID: 1545832879}
+  - component: {fileID: 1545832880}
   m_Layer: 0
   m_Name: Cow
   m_TagString: Untagged
@@ -2299,6 +2384,19 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!114 &1545832880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1545832877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd3bbaf99580f41fbafd9d0c99698911, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  species: 3
+  highlightColor: {r: 0.9862069, g: 1, b: 0, a: 1}
 --- !u!1 &1554322450
 GameObject:
   m_ObjectHideFlags: 0
@@ -2787,6 +2885,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1815950014}
   - component: {fileID: 1815950015}
+  - component: {fileID: 1815950016}
   m_Layer: 0
   m_Name: Duck
   m_TagString: Untagged
@@ -2842,6 +2941,19 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!114 &1815950016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1815950013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd3bbaf99580f41fbafd9d0c99698911, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  species: 1
+  highlightColor: {r: 0.9862069, g: 1, b: 0, a: 1}
 --- !u!1 &1860365382
 GameObject:
   m_ObjectHideFlags: 0

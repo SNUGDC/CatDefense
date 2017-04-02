@@ -38,6 +38,22 @@ public class Cat : MonoBehaviour
 		this.meatSize = allCuttingResults[Random.Range(0, allCuttingResults.Count)];
 		meatSizeImage.cuttingSize = this.meatSize;
     }
+
+    /// <summary>
+    /// Start is called on the frame when a script is enabled just before
+    /// any of the Update methods is called the first time.
+    /// </summary>
+    void Start()
+    {
+        Cats.Instance.cats.Add(this);
+    }
+    /// <summary>
+    /// This function is called when the MonoBehaviour will be destroyed.
+    /// </summary>
+    void OnDestroy()
+    {
+        Cats.Instance.cats.Remove(this);
+    }
     // Update is called once per frame
     void Update()
     {
