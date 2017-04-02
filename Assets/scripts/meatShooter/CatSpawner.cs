@@ -3,43 +3,73 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CatSpawner : MonoBehaviour
+public class CatSpawner : MonoBehaviour, WaveTimeOut
 {
     public Transform left;
     public Transform right;
-	public Cat catPrefab;
+    public Cat catPrefab;
+
+    private SpawnRoutine spawnRoutine;
 
     /// <summary>
-    /// Start is called on the frame when a script is enabled just before
-    /// any of the Update methods is called the first time.
+    /// Update is called every frame, if the MonoBehaviour is enabled.
     /// </summary>
-    void Start()
+    void Update()
     {
-		// TODO: 웨이브 시작할 때마다 어디선가 불러주는 코드 필요
-		StartCoroutine(SpawnRoutine());
-    }
-
-    IEnumerator SpawnRoutine()
-    {
-		float remainTime = Configurations.Instance.WaveTime;
-        while (remainTime > 0)
+        if (spawnRoutine != null)
         {
-			SpawnCat();
-			float coolTime = MeatShooter.Instance.CurrentWave.defaultCooltime;
-			if (remainTime < Configurations.Instance.FeverTime) {
-				coolTime = coolTime / 2;
-			}
-			yield return new WaitForSeconds(coolTime);
-			remainTime -= coolTime;
+            if (spawnRoutine.CheckSpawn(Time.deltaTime))
+            {
+                SpawnCat();
+            }
         }
-
-		Debug.Log("Wave end");
     }
 
     private void SpawnCat()
     {
         Cat cat = Instantiate(catPrefab) as Cat;
-		float x = UnityEngine.Random.Range(left.position.x, right.position.x);
-		cat.transform.position = new Vector3(x, transform.position.y, transform.position.z);
+        float x = UnityEngine.Random.Range(left.position.x, right.position.x);
+        cat.transform.position = new Vector3(x, transform.position.y, transform.position.z);
+    }
+
+    void WaveTimeOut.OnWaveStart()
+    {
+        float defaultCool = MeatShooter.Instance.CurrentWave.defaultCooltime;
+        spawnRoutine = new SpawnRoutine(defaultCool);
+    }
+
+    void WaveTimeOut.OnFeverTimeStart()
+    {
+        spawnRoutine.coolTime /= 2;
+    }
+
+    void WaveTimeOut.OnWaveEnd()
+    {
+        spawnRoutine = null;
+    }
+}
+
+class SpawnRoutine
+{
+    public float remainCool;
+    public float coolTime;
+
+    public SpawnRoutine(float coolTime)
+    {
+        this.coolTime = coolTime;
+    }
+
+    public bool CheckSpawn(float dt)
+    {
+        remainCool -= dt;
+        if (remainCool < 0)
+        {
+            remainCool = coolTime;
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 }

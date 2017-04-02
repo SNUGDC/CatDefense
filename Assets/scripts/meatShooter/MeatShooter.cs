@@ -50,6 +50,19 @@ public class MeatShooter : MonoBehaviour, ShooterOutput {
 		Instance = this;
 		meatPeace = null;
 		shooter.shooterOutput = this;
+
+		WaveTimeUI.Instance.input = WaveTime.Instance;
+		CatSpawner spawner = FindObjectOfType<CatSpawner>();
+		WaveTime.Instance.AddEventListener(spawner);
+	}
+
+	/// <summary>
+	/// Start is called on the frame when a script is enabled just before
+	/// any of the Update methods is called the first time.
+	/// </summary>
+	void Start()
+	{
+		WaveTime.Instance.StartWaveTime();
 	}
 
     void ShooterOutput.OnShoot()
