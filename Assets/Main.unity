@@ -2714,7 +2714,7 @@ MonoBehaviour:
   shooter: {fileID: 686265584}
   selectedMeatShower: {fileID: 2101905885}
   selectedMeatSize: {fileID: 1195619708}
-  meatPeaceSelector: {fileID: 2121525756}
+  meatPieceSelector: {fileID: 2121525756}
 --- !u!1 &2121525753
 GameObject:
   m_ObjectHideFlags: 0

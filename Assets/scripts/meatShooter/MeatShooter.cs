@@ -20,28 +20,28 @@ public class MeatShooter : MonoBehaviour, ShooterOutput {
 	public MeatShooterShooter shooter;
 	public MeatSelection selectedMeatShower;
 	public MeatSizeImage selectedMeatSize;
-	public MeatPeaceSelector meatPeaceSelector;
+	public MeatPieceSelector meatPieceSelector;
 
-    private MeatPeace _meatPeace;
+    private MeatPiece _meatPiece;
 
-    public MeatPeace meatPeace {
+    public MeatPiece meatPiece {
 		get {
-			return _meatPeace;
+			return _meatPiece;
 		}
 		set {
-			_meatPeace = value;
-			if (_meatPeace == null) {
+			_meatPiece = value;
+			if (_meatPiece == null) {
 				meatRenderer.enabled = false;
 				shooter.enabled = false;
 				selectedMeatShower.meatSpecies = null;
 				selectedMeatSize.cuttingResult = null;
-				meatPeaceSelector.meatPeace = null;
+				meatPieceSelector.meatPiece = null;
 			} else {
 				meatRenderer.enabled = true;
 				shooter.enabled = true;
-				selectedMeatShower.meatSpecies = _meatPeace.meatSpecies;
-				selectedMeatSize.cuttingResult = _meatPeace.cuttingResult;
-				meatPeaceSelector.meatPeace = _meatPeace;
+				selectedMeatShower.meatSpecies = _meatPiece.meatSpecies;
+				selectedMeatSize.cuttingResult = _meatPiece.cuttingResult;
+				meatPieceSelector.meatPiece = _meatPiece;
 			}
 		}
 	}
@@ -52,7 +52,7 @@ public class MeatShooter : MonoBehaviour, ShooterOutput {
 	void Awake()
 	{
 		Instance = this;
-		meatPeace = null;
+		meatPiece = null;
 		shooter.shooterOutput = this;
 
 		WaveTimeUI.Instance.input = WaveTime.Instance;
@@ -71,6 +71,6 @@ public class MeatShooter : MonoBehaviour, ShooterOutput {
 
     void ShooterOutput.OnShoot()
     {
-        this.meatPeace = null;
+        this.meatPiece = null;
     }
 }

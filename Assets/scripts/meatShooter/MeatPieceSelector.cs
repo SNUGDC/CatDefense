@@ -11,7 +11,7 @@ public class MeatResourcePerSize
     public Sprite small;
 }
 
-public class MeatPeaceSelector : MonoBehaviour
+public class MeatPieceSelector : MonoBehaviour
 {
 
     public MeatResourcePerSize chickenResource;
@@ -20,34 +20,34 @@ public class MeatPeaceSelector : MonoBehaviour
     public MeatResourcePerSize cowResource;
     public MeatResourcePerSize lambResource;
 
-    private MeatPeace _meatPeace;
-    public MeatPeace meatPeace
+    private MeatPiece _meatPiece;
+    public MeatPiece meatPiece
     {
         get
         {
-            return _meatPeace;
+            return _meatPiece;
         }
         set
         {
-            _meatPeace = value;
+            _meatPiece = value;
             UpdateResource();
         }
     }
 
     private void UpdateResource()
     {
-        GetComponent<SpriteRenderer>().sprite = GetSprite(_meatPeace);
+        GetComponent<SpriteRenderer>().sprite = GetSprite(_meatPiece);
     }
 
-    private Sprite GetSprite(MeatPeace meatPeace)
+    private Sprite GetSprite(MeatPiece meatPiece)
     {
-		if (meatPeace == null)
+		if (meatPiece == null)
 		{
 			return null;
 		}
 
         MeatResourcePerSize resourcePerSize = null;
-        switch (meatPeace.meatSpecies)
+        switch (meatPiece.meatSpecies)
         {
             case MeatSpecies.Chicken:
                 resourcePerSize = chickenResource;
@@ -66,7 +66,7 @@ public class MeatPeaceSelector : MonoBehaviour
                 break;
         }
 
-        switch (meatPeace.cuttingResult)
+        switch (meatPiece.cuttingResult)
         {
             case CuttingResult.BIG:
                 return resourcePerSize.big;

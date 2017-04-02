@@ -8,26 +8,26 @@ public class MeatBullet : MonoBehaviour
     public float speed;
     public Vector3 direction;
 
-    private MeatPeace meatPeace;
+    private MeatPiece meatPiece;
     public MeatSpecies meatSpecies
     {
         get
         {
-            return meatPeace.meatSpecies;
+            return meatPiece.meatSpecies;
         }
     }
     public CuttingResult meatSize
     {
         get
         {
-            return meatPeace.cuttingResult;
+            return meatPiece.cuttingResult;
         }
     }
 
-	public void SetMeatPeace(MeatPeace meatPeace)
+	public void SetMeatPiece(MeatPiece meatPiece)
 	{
-		this.meatPeace = meatPeace;
-		GetComponent<MeatPeaceSelector>().meatPeace = meatPeace;
+		this.meatPiece = meatPiece;
+		GetComponent<MeatPieceSelector>().meatPiece = meatPiece;
 	}
 
     // Update is called once per frame

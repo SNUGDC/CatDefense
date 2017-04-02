@@ -17,7 +17,7 @@ public class MeatShooterShooter : MonoBehaviour {
 		if (Input.GetKeyDown(KeyCode.Space))
 		{
 			MeatBullet newPiece = Instantiate(meatPiece, transform.position, Quaternion.identity) as MeatBullet;
-			newPiece.SetMeatPeace(MeatShooter.Instance.meatPeace);
+			newPiece.SetMeatPiece(MeatShooter.Instance.meatPiece);
 			newPiece.transform.eulerAngles = transform.eulerAngles;
 			shooterOutput.OnShoot();
 		}
