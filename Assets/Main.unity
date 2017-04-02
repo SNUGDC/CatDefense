@@ -142,6 +142,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeText: {fileID: 53814588}
+  waveTimeLabel: {fileID: 1680113184}
 --- !u!222 &16084956
 CanvasRenderer:
   m_ObjectHideFlags: 0

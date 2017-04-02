@@ -8,6 +8,7 @@ public class WaveTimeUI : MonoBehaviour {
 	public static WaveTimeUI Instance;
 
 	public Text timeText;
+	public Text waveTimeLabel;
 
 	/// <summary>
 	/// Awake is called when the script instance is being loaded.
@@ -29,5 +30,7 @@ public class WaveTimeUI : MonoBehaviour {
 			int underSeconds = (int)(remainTime.Value * 100) % 100;
 			timeText.text = string.Format("{0:D2}:{1:D2}", seconds, underSeconds);
 		}
+
+		waveTimeLabel.text = GlobalInfo.Instance.currentWave + " Wave Time";
 	}
 }
