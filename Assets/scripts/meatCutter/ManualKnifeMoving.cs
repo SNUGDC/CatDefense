@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ManualKnifeMoving : MonoBehaviour
+public class ManualKnifeMoving : MonoBehaviour, IGameEndReceiver
 {
 	private void Update()
 	{

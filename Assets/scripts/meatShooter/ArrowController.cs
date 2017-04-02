@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ArrowController : MonoBehaviour {
+public class ArrowController : MonoBehaviour, IGameEndReceiver {
 
 	public float speed;
 

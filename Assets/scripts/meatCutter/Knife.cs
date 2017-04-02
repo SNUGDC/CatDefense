@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Knife : MonoBehaviour {
+public class Knife : MonoBehaviour, IGameEndReceiver {
 	public Transform left;
 	public Transform right;
 	public float period = 1.0f;
@@ -22,7 +22,7 @@ public class Knife : MonoBehaviour {
 
 	IEnumerator move()
 	{
-		while (true)
+		while (GameEnd.Instance.isGameEnd == false)
         {
             if (IsLeftReached()) {
 				direction = Direction.Right;
