@@ -86,7 +86,8 @@ public class Cat : MonoBehaviour
             Destroy(gameObject);
             float reward = Configurations.Instance.GoodReward;
             if (meatPiece.meatJudgement == CuttingJudgement.Perfect) {
-                reward *= Configurations.Instance.PerfectReward;
+                float perfectRewardMultiplier = UpgradeApplier.Instance.GetPerfectRewardRatioAdded();
+                reward *= (Configurations.Instance.PerfectReward + perfectRewardMultiplier);
             } else if (meatPiece.meatJudgement == CuttingJudgement.Bad) {
                 reward *= Configurations.Instance.BadReward;
             }

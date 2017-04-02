@@ -26,4 +26,9 @@ public class UpgradeApplier : MonoBehaviour {
 	{
 		return 1.0f - 0.1f * GlobalInfo.Instance.GetCatSlowUpgradeLevel();
 	}
+
+	public float GetPerfectRewardRatioAdded()
+	{
+		return 0.2f * GlobalInfo.Instance.GetPerfectRewardUpgradeLevel();
+	}
 }
