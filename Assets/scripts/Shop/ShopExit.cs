@@ -6,6 +6,6 @@ using UnityEngine.SceneManagement;
 public class ShopExit : MonoBehaviour {
 	public void MoveToGame()
 	{
-		SceneManager.LoadScene("Main");
+		BackgroundMusic.FadeOutAndChangeScene("Main");
 	}
 }

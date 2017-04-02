@@ -64,7 +64,7 @@ public class Cat : MonoBehaviour
 
         if (transform.position.y < MeatShooter.Instance.catDieLine.position.y) {
             Debug.LogError("Game Over");
-            SceneManager.LoadScene("Start");
+			BackgroundMusic.FadeOutAndChangeScene("Start");
         }
     }
 
