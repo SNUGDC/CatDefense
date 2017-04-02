@@ -67,6 +67,7 @@ public class Cat : MonoBehaviour
         {
             Destroy(other.gameObject);
             Destroy(gameObject);
+            GlobalInfo.Instance.money += 10;
         }
         else
         {
