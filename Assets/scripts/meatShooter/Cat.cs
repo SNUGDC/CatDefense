@@ -89,7 +89,8 @@ public class Cat : MonoBehaviour
                 float perfectRewardMultiplier = UpgradeApplier.Instance.GetPerfectRewardRatioAdded();
                 reward *= (Configurations.Instance.PerfectReward + perfectRewardMultiplier);
             } else if (meatPiece.meatJudgement == CuttingJudgement.Bad) {
-                reward *= Configurations.Instance.BadReward;
+                float badPenaltyRewardAdded = UpgradeApplier.Instance.GetBadPenaltyRatioAdded();
+                reward *= (Configurations.Instance.BadReward + badPenaltyRewardAdded);
             }
             GlobalInfo.Instance.money += (int)reward;
         }

@@ -31,4 +31,9 @@ public class UpgradeApplier : MonoBehaviour {
 	{
 		return 0.2f * GlobalInfo.Instance.GetPerfectRewardUpgradeLevel();
 	}
+
+	public float GetBadPenaltyRatioAdded()
+	{
+		return 0.05f * GlobalInfo.Instance.GetBadPanelyUpgradeLevel();
+	}
 }
