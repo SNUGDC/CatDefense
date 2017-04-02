@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class MeatManager : MonoBehaviour, KnifeCuttingOut, IGameEndReceiver
 {
@@ -32,6 +33,8 @@ public class MeatManager : MonoBehaviour, KnifeCuttingOut, IGameEndReceiver
 	public KnifeCutting knifeCutting;
     public JudgementPopup judgementPopup;
 
+    public List<Refrigerator> refrigerators;
+
     /// <summary>
     /// Awake is called when the script instance is being loaded.
     /// </summary>
@@ -59,6 +62,10 @@ public class MeatManager : MonoBehaviour, KnifeCuttingOut, IGameEndReceiver
         {
             GlobalInfo.Instance.money -= meatPrice;
             meatSpecies = selectedMeat;
+            refrigerators
+                .Where(r => r.meatSpecies == selectedMeat.Value)
+                .ToList()
+                .ForEach(r => r.Open());
         }
     }
 

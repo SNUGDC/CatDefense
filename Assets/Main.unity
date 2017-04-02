@@ -577,6 +577,7 @@ GameObject:
   - component: {fileID: 350336034}
   - component: {fileID: 350336035}
   - component: {fileID: 350336036}
+  - component: {fileID: 350336037}
   m_Layer: 0
   m_Name: Chicken
   m_TagString: Untagged
@@ -645,6 +646,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   species: 4
   highlightColor: {r: 0.9862069, g: 1, b: 0, a: 1}
+--- !u!114 &350336037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 350336033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 092c1fa3ded024e599637a68baf722fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  open: {fileID: 21300000, guid: 68c64863d9b7ab842b7bc410e8c11770, type: 3}
+  original: {fileID: 21300000, guid: 92b6661656b26b2409d3240eaf64fc8c, type: 3}
+  meatSpecies: 4
 --- !u!1 &455544222
 GameObject:
   m_ObjectHideFlags: 0
@@ -2405,6 +2420,7 @@ GameObject:
   - component: {fileID: 1262511932}
   - component: {fileID: 1262511933}
   - component: {fileID: 1262511934}
+  - component: {fileID: 1262511935}
   m_Layer: 0
   m_Name: Salmon
   m_TagString: Untagged
@@ -2473,6 +2489,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   species: 2
   highlightColor: {r: 0.9862069, g: 1, b: 0, a: 1}
+--- !u!114 &1262511935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1262511931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 092c1fa3ded024e599637a68baf722fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  open: {fileID: 21300000, guid: 68c64863d9b7ab842b7bc410e8c11770, type: 3}
+  original: {fileID: 21300000, guid: ce6a0e4c92c34f64ea828a5878d0c0f0, type: 3}
+  meatSpecies: 2
 --- !u!1 &1300751586
 GameObject:
   m_ObjectHideFlags: 0
@@ -2604,6 +2634,7 @@ GameObject:
   - component: {fileID: 1324162178}
   - component: {fileID: 1324162179}
   - component: {fileID: 1324162180}
+  - component: {fileID: 1324162181}
   m_Layer: 0
   m_Name: Lamb
   m_TagString: Untagged
@@ -2672,6 +2703,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   species: 0
   highlightColor: {r: 0.9862069, g: 1, b: 0, a: 1}
+--- !u!114 &1324162181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1324162177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 092c1fa3ded024e599637a68baf722fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  open: {fileID: 21300000, guid: 68c64863d9b7ab842b7bc410e8c11770, type: 3}
+  original: {fileID: 21300000, guid: 14d20ec22ef1b6a4eb6b8f1a76e71b8f, type: 3}
+  meatSpecies: 0
 --- !u!1 &1331925982
 GameObject:
   m_ObjectHideFlags: 0
@@ -2873,6 +2918,12 @@ MonoBehaviour:
   meatOnDoma: {fileID: 1083443507}
   knifeCutting: {fileID: 1217606956}
   judgementPopup: {fileID: 910927413}
+  refrigerators:
+  - {fileID: 1262511935}
+  - {fileID: 1324162181}
+  - {fileID: 1545832881}
+  - {fileID: 350336037}
+  - {fileID: 1815950017}
 --- !u!1 &1505765467
 GameObject:
   m_ObjectHideFlags: 0
@@ -3075,6 +3126,7 @@ GameObject:
   - component: {fileID: 1545832878}
   - component: {fileID: 1545832879}
   - component: {fileID: 1545832880}
+  - component: {fileID: 1545832881}
   m_Layer: 0
   m_Name: Cow
   m_TagString: Untagged
@@ -3143,6 +3195,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   species: 3
   highlightColor: {r: 0.9862069, g: 1, b: 0, a: 1}
+--- !u!114 &1545832881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1545832877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 092c1fa3ded024e599637a68baf722fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  open: {fileID: 21300000, guid: 68c64863d9b7ab842b7bc410e8c11770, type: 3}
+  original: {fileID: 21300000, guid: f3227a8ecc8f0294eb739adcbb6fef7c, type: 3}
+  meatSpecies: 3
 --- !u!1 &1554322450
 GameObject:
   m_ObjectHideFlags: 0
@@ -3632,6 +3698,7 @@ GameObject:
   - component: {fileID: 1815950014}
   - component: {fileID: 1815950015}
   - component: {fileID: 1815950016}
+  - component: {fileID: 1815950017}
   m_Layer: 0
   m_Name: Duck
   m_TagString: Untagged
@@ -3700,6 +3767,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   species: 1
   highlightColor: {r: 0.9862069, g: 1, b: 0, a: 1}
+--- !u!114 &1815950017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1815950013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 092c1fa3ded024e599637a68baf722fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  open: {fileID: 21300000, guid: 68c64863d9b7ab842b7bc410e8c11770, type: 3}
+  original: {fileID: 21300000, guid: 0f94e147f122e1248a2c3ffd76684c3b, type: 3}
+  meatSpecies: 1
 --- !u!1 &1860365382
 GameObject:
   m_ObjectHideFlags: 0
