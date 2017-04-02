@@ -23,9 +23,12 @@ public class GlobalInfo
 		UpgradeLevel = new List<int> {
 			0, 0, 0, 0, 0, 0
 		};
+        currentWave = 0;
 	}
 
     public int money;
     public List<int> UpgradeLevel;
+
+    public int currentWave;
 
 }

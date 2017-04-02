@@ -2,13 +2,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class MeatShooter : MonoBehaviour, ShooterOutput {
-	private int currentWaveNum = 0;
+public class MeatShooter : MonoBehaviour, ShooterOutput, WaveTimeOut {
 
 	public WaveStat CurrentWave {
 		get {
-			return WaveDB.Instance.Get(currentWaveNum);
+			return WaveDB.Instance.Get(GlobalInfo.Instance.currentWave);
 		}
 	}
 
@@ -58,6 +58,7 @@ public class MeatShooter : MonoBehaviour, ShooterOutput {
 		WaveTimeUI.Instance.input = WaveTime.Instance;
 		CatSpawner spawner = FindObjectOfType<CatSpawner>();
 		WaveTime.Instance.AddEventListener(spawner);
+		WaveTime.Instance.AddEventListener(this);
 	}
 
 	/// <summary>
@@ -72,5 +73,19 @@ public class MeatShooter : MonoBehaviour, ShooterOutput {
     void ShooterOutput.OnShoot()
     {
         this.meatPiece = null;
+    }
+
+    void WaveTimeOut.OnWaveStart()
+    {
+    }
+
+    void WaveTimeOut.OnFeverTimeStart()
+    {
+    }
+
+    void WaveTimeOut.OnWaveEnd()
+    {
+		GlobalInfo.Instance.currentWave += 1;
+		SceneManager.LoadScene("Shop");
     }
 }

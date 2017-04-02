@@ -28,6 +28,10 @@ public class WaveTime : MonoBehaviour, WaveTimeInput
     }
 
     private float? remainTime = null;
+    public void SetRemainTimeCheat(float remainTime)
+    {
+        this.remainTime = remainTime;
+    }
     private List<WaveTimeOut> outEvent = new List<WaveTimeOut>();
 
 	public void AddEventListener(WaveTimeOut listener)
