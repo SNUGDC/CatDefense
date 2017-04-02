@@ -16,19 +16,27 @@ public class MeatBullet : MonoBehaviour
             return meatPiece.meatSpecies;
         }
     }
-    public CuttingResult meatSize
+    public CuttingSize meatSize
     {
         get
         {
-            return meatPiece.cuttingResult;
+            return meatPiece.cuttingResult.size;
         }
     }
 
-	public void SetMeatPiece(MeatPiece meatPiece)
-	{
-		this.meatPiece = meatPiece;
-		GetComponent<MeatPieceSelector>().meatPiece = meatPiece;
-	}
+    public CuttingJudgement meatJudgement
+    {
+        get
+        {
+            return meatPiece.cuttingResult.judgement;
+        }
+    }
+
+    public void SetMeatPiece(MeatPiece meatPiece)
+    {
+        this.meatPiece = meatPiece;
+        GetComponent<MeatPieceSelector>().meatPiece = meatPiece;
+    }
 
     // Update is called once per frame
     void Update()

@@ -66,13 +66,13 @@ public class MeatPieceSelector : MonoBehaviour
                 break;
         }
 
-        switch (meatPiece.cuttingResult)
+        switch (meatPiece.cuttingResult.size)
         {
-            case CuttingResult.BIG:
+            case CuttingSize.BIG:
                 return resourcePerSize.big;
-            case CuttingResult.MIDDLE:
+            case CuttingSize.MIDDLE:
                 return resourcePerSize.middle;
-            case CuttingResult.SMALL:
+            case CuttingSize.SMALL:
                 return resourcePerSize.small;
         }
 

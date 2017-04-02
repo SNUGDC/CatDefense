@@ -19,7 +19,7 @@ public class Cat : MonoBehaviour
 
     public float speed = 0.03f;
     public MeatSpecies meatSpecies;
-	public CuttingResult meatSize;
+	public CuttingSize meatSize;
 
     /// <summary>
     /// Awake is called when the script instance is being loaded.
@@ -32,11 +32,11 @@ public class Cat : MonoBehaviour
         favorite.meatSpecies = this.meatSpecies;
         this.GetComponent<SpriteRenderer>().sprite = catResource.sprite;
 
-		List<CuttingResult> allCuttingResults = new List<CuttingResult> {
-			CuttingResult.BIG, CuttingResult.MIDDLE, CuttingResult.SMALL
+		List<CuttingSize> allCuttingResults = new List<CuttingSize> {
+			CuttingSize.BIG, CuttingSize.MIDDLE, CuttingSize.SMALL
 		};
 		this.meatSize = allCuttingResults[Random.Range(0, allCuttingResults.Count)];
-		meatSizeImage.cuttingResult = this.meatSize;
+		meatSizeImage.cuttingSize = this.meatSize;
     }
     // Update is called once per frame
     void Update()
@@ -61,13 +61,19 @@ public class Cat : MonoBehaviour
         MeatBullet meatPiece = other.GetComponent<MeatBullet>();
         MeatSpecies wantMeat = meatSpecies;
         MeatSpecies givenMeat = meatPiece.meatSpecies;
-        CuttingResult wantSize = meatSize;
-        CuttingResult givenSize = meatPiece.meatSize;
+        CuttingSize wantSize = meatSize;
+        CuttingSize givenSize = meatPiece.meatSize;
         if (wantMeat == givenMeat && wantSize == givenSize)
         {
             Destroy(other.gameObject);
             Destroy(gameObject);
-            GlobalInfo.Instance.money += 10;
+            float reward = Configurations.Instance.GoodReward;
+            if (meatPiece.meatJudgement == CuttingJudgement.Perfect) {
+                reward *= Configurations.Instance.PerfectReward;
+            } else if (meatPiece.meatJudgement == CuttingJudgement.Bad) {
+                reward *= Configurations.Instance.BadReward;
+            }
+            GlobalInfo.Instance.money += (int)reward;
         }
         else
         {

@@ -9,8 +9,8 @@ public class MeatSizeImage : MonoBehaviour
     public Sprite middle;
     public Sprite small;
 
-    private CuttingResult? _cuttingResult;
-    public CuttingResult? cuttingResult
+    private CuttingSize? _cuttingResult;
+    public CuttingSize? cuttingSize
     {
         get
         {
@@ -34,11 +34,11 @@ public class MeatSizeImage : MonoBehaviour
     {
         switch (_cuttingResult.Value)
         {
-            case CuttingResult.BIG:
+            case CuttingSize.BIG:
                 return big;
-            case CuttingResult.MIDDLE:
+            case CuttingSize.MIDDLE:
                 return middle;
-            case CuttingResult.SMALL:
+            case CuttingSize.SMALL:
                 return small;
         }
 		

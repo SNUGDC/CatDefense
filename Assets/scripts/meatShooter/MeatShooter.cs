@@ -34,13 +34,13 @@ public class MeatShooter : MonoBehaviour, ShooterOutput, WaveTimeOut {
 				meatRenderer.enabled = false;
 				shooter.enabled = false;
 				selectedMeatShower.meatSpecies = null;
-				selectedMeatSize.cuttingResult = null;
+				selectedMeatSize.cuttingSize = null;
 				meatPieceSelector.meatPiece = null;
 			} else {
 				meatRenderer.enabled = true;
 				shooter.enabled = true;
 				selectedMeatShower.meatSpecies = _meatPiece.meatSpecies;
-				selectedMeatSize.cuttingResult = _meatPiece.cuttingResult;
+				selectedMeatSize.cuttingSize = _meatPiece.cuttingResult.size;
 				meatPieceSelector.meatPiece = _meatPiece;
 			}
 		}
