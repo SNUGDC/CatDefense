@@ -16,7 +16,7 @@ public class JudgementPopup : MonoBehaviour
 	{
 		GetComponent<SpriteRenderer>().sprite = null;
 	}
-    public void SetJudgementVoid(CuttingJudgement judgement)
+    public void SetJudgement(CuttingJudgement judgement)
     {
 		if (banishCoroutine != null)
 		{

@@ -36,7 +36,7 @@ public class Cat : MonoBehaviour
 			CuttingSize.BIG, CuttingSize.MIDDLE, CuttingSize.SMALL
 		};
 		this.meatSize = allCuttingResults[Random.Range(0, allCuttingResults.Count)];
-		meatSizeImage.cuttingResult = this.meatSize;
+		meatSizeImage.cuttingSize = this.meatSize;
     }
     // Update is called once per frame
     void Update()
@@ -67,7 +67,13 @@ public class Cat : MonoBehaviour
         {
             Destroy(other.gameObject);
             Destroy(gameObject);
-            GlobalInfo.Instance.money += 10;
+            float reward = Configurations.Instance.GoodReward;
+            if (meatPiece.meatJudgement == CuttingJudgement.Perfect) {
+                reward *= Configurations.Instance.PerfectReward;
+            } else if (meatPiece.meatJudgement == CuttingJudgement.Bad) {
+                reward *= Configurations.Instance.BadReward;
+            }
+            GlobalInfo.Instance.money += (int)reward;
         }
         else
         {

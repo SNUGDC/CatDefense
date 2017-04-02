@@ -10,7 +10,7 @@ public class MeatSizeImage : MonoBehaviour
     public Sprite small;
 
     private CuttingSize? _cuttingResult;
-    public CuttingSize? cuttingResult
+    public CuttingSize? cuttingSize
     {
         get
         {

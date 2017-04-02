@@ -1352,6 +1352,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WaveTime: 20
   FeverTime: 10
+  PerfectRatio: 0.1
+  GoodRatio: 0.2
+  GoodReward: 10
+  PerfectReward: 1.3
+  BadReward: 0.7
 --- !u!1 &1083443504
 GameObject:
   m_ObjectHideFlags: 0
@@ -2198,6 +2203,7 @@ MonoBehaviour:
   meatSelection: {fileID: 1083443508}
   meatOnDoma: {fileID: 1083443507}
   knifeCutting: {fileID: 1217606956}
+  judgementPopup: {fileID: 910927413}
 --- !u!1 &1530209053
 GameObject:
   m_ObjectHideFlags: 0

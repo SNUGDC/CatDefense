@@ -66,7 +66,7 @@ public class MeatPieceSelector : MonoBehaviour
                 break;
         }
 
-        switch (meatPiece.cuttingResult)
+        switch (meatPiece.cuttingResult.size)
         {
             case CuttingSize.BIG:
                 return resourcePerSize.big;

@@ -30,11 +30,12 @@ public class MeatManager : MonoBehaviour, KnifeCuttingOut
     }
 
 	public KnifeCutting knifeCutting;
+    public JudgementPopup judgementPopup;
 
-	/// <summary>
-	/// Awake is called when the script instance is being loaded.
-	/// </summary>
-	void Awake()
+    /// <summary>
+    /// Awake is called when the script instance is being loaded.
+    /// </summary>
+    void Awake()
 	{
 		knifeCutting.cuttingEventOut = this;
 	}
@@ -82,12 +83,13 @@ public class MeatManager : MonoBehaviour, KnifeCuttingOut
         return null;
     }
 
-    void KnifeCuttingOut.OnCut(CuttingSize cuttingResult)
+    void KnifeCuttingOut.OnCut(CuttingResult cuttingResult)
     {
         if (meatSpecies == null) {
 			return;
 		} else {
 			Debug.Log("Cut " + cuttingResult + ", " + meatSpecies);
+            judgementPopup.SetJudgement(cuttingResult.judgement);
             MeatShooter.Instance.meatPiece = new MeatPiece(
                 meatSpecies.Value,
                 cuttingResult

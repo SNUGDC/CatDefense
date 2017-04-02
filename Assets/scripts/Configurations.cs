@@ -5,6 +5,12 @@ using UnityEngine;
 public class Configurations : MonoBehaviour {
 	public float WaveTime = 10.0f;
 	public float FeverTime = 5.0f;
+	public float PerfectRatio = 0.1f;
+	public float GoodRatio = 0.2f;
+
+	public int GoodReward = 10;
+	public float PerfectReward = 1.3f;
+	public float BadReward = 0.7f;
 
 	public static Configurations Instance;
 
