@@ -128,7 +128,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 500, y: 200}
+  m_SizeDelta: {x: 400, y: 160}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &16084955
 MonoBehaviour:
@@ -323,7 +323,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 120}
+  m_SizeDelta: {x: 0, y: 85}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &53814588
 MonoBehaviour:
@@ -346,11 +346,11 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 97
+    m_FontSize: 115
     m_FontStyle: 1
     m_BestFit: 1
-    m_MinSize: 10
-    m_MaxSize: 97
+    m_MinSize: 0
+    m_MaxSize: 300
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -414,22 +414,22 @@ Prefab:
     - target: {fileID: 224536262104335396, guid: cebef69ec48f34cab9cc3d297162ebef,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 663
+      value: 790
       objectReference: {fileID: 0}
     - target: {fileID: 224536262104335396, guid: cebef69ec48f34cab9cc3d297162ebef,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 449
+      value: 474
       objectReference: {fileID: 0}
     - target: {fileID: 224536262104335396, guid: cebef69ec48f34cab9cc3d297162ebef,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 564
+      value: 282
       objectReference: {fileID: 0}
     - target: {fileID: 224536262104335396, guid: cebef69ec48f34cab9cc3d297162ebef,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 148
+      value: 74
       objectReference: {fileID: 0}
     - target: {fileID: 224536262104335396, guid: cebef69ec48f34cab9cc3d297162ebef,
         type: 2}
@@ -460,6 +460,11 @@ Prefab:
         type: 2}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114779872222871620, guid: cebef69ec48f34cab9cc3d297162ebef,
+        type: 2}
+      propertyPath: m_FontData.m_BestFit
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114030562348907928, guid: cebef69ec48f34cab9cc3d297162ebef, type: 2}
