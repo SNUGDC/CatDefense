@@ -227,7 +227,7 @@ MonoBehaviour:
     meatSpecies: 1
   favorite: {fileID: 114512957585944658}
   meatSizeImage: {fileID: 114500977782299102}
-  speed: 0.03
+  speed: 0.02
   meatSpecies: 0
   meatSize: 0
 --- !u!212 &212007820319408316
