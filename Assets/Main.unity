@@ -2116,6 +2116,13 @@ MonoBehaviour:
   - defaultCooltime: 5
   - defaultCooltime: 4
   - defaultCooltime: 3
+  - defaultCooltime: 2.7
+  - defaultCooltime: 2.5
+  - defaultCooltime: 2.4
+  - defaultCooltime: 2.3
+  - defaultCooltime: 2.2
+  - defaultCooltime: 2.1
+  - defaultCooltime: 2
 --- !u!4 &1135778310
 Transform:
   m_ObjectHideFlags: 0
