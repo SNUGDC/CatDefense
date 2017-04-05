@@ -16,10 +16,13 @@ public class Cat : MonoBehaviour, IGameEndReceiver
     public List<CatResource> catResources;
     public MeatSelection favorite;
 	public MeatSizeImage meatSizeImage;
+    public GameObject heartEffect;
 
     public float speed = 0.03f;
     public MeatSpecies meatSpecies;
 	public CuttingSize meatSize;
+
+    bool willDestroy;
 
     /// <summary>
     /// Awake is called when the script instance is being loaded.
@@ -46,6 +49,8 @@ public class Cat : MonoBehaviour, IGameEndReceiver
     void Start()
     {
         Cats.Instance.cats.Add(this);
+        heartEffect.SetActive(false);
+        willDestroy = false;
     }
     /// <summary>
     /// This function is called when the MonoBehaviour will be destroyed.
@@ -57,6 +62,7 @@ public class Cat : MonoBehaviour, IGameEndReceiver
     // Update is called once per frame
     void Update()
     {
+        if (willDestroy) return;
         Transform target = MeatShooter.Instance.catGoalPoint;
         Vector3 direction = (target.position - transform.position).normalized;
         float slowMultiplier = UpgradeApplier.Instance.GetCalMovementSlowMultiplier();
@@ -83,7 +89,13 @@ public class Cat : MonoBehaviour, IGameEndReceiver
         if (wantMeat == givenMeat && wantSize == givenSize)
         {
             Destroy(other.gameObject);
-            Destroy(gameObject);
+            GetComponent<Collider2D>().enabled = false;
+            transform.FindChild("Bubble").gameObject.SetActive(false);
+            transform.FindChild("favorite").gameObject.SetActive(false);
+            transform.FindChild("size").gameObject.SetActive(false);
+            willDestroy = true;
+            heartEffect.SetActive(true);
+            Destroy(gameObject, 0.5f);
             float reward = Configurations.Instance.GoodReward;
             if (meatPiece.meatJudgement == CuttingJudgement.Perfect) {
                 float perfectRewardMultiplier = UpgradeApplier.Instance.GetPerfectRewardRatioAdded();
