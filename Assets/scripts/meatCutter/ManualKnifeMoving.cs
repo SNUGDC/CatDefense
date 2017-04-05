@@ -8,11 +8,11 @@ public class ManualKnifeMoving : MonoBehaviour, IGameEndReceiver
 	{
 		float defaultSpeed = Configurations.Instance.defaultKnifeSpeed;
 		float speed = defaultSpeed * UpgradeApplier.Instance.GetKnifeSpeedMultiplier();
-		if(Input.GetKey(KeyCode.C))
+		if(Input.GetKey(KeyCode.RightArrow))
 		{
 			transform.position = new Vector3(transform.position.x + speed * Time.deltaTime, transform.position.y, transform.position.z);
 		}
-		else if(Input.GetKey(KeyCode.Z))
+		else if(Input.GetKey(KeyCode.LeftArrow))
 		{
 			transform.position = new Vector3(transform.position.x - speed * Time.deltaTime, transform.position.y, transform.position.z);
 		}
