@@ -15,6 +15,10 @@ public class GlobalInfo
             }
             return _instance;
         }
+        set
+        {
+            _instance = value;
+        }
     }
 
 	public GlobalInfo()
