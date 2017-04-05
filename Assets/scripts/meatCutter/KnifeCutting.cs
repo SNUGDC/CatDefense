@@ -30,10 +30,15 @@ public class KnifeCutting : MonoBehaviour, IGameEndReceiver
     {
         if (Input.GetKeyUp(KeyCode.Space))
         {
-            CuttingResult cuttingResult = Cut();
-            cuttingEventOut.OnCut(cuttingResult);
-            cutEffect.Show();
+            CutCut();
         }
+    }
+
+    public void CutCut()
+    {
+        CuttingResult cuttingResult = Cut();
+        cuttingEventOut.OnCut(cuttingResult);
+        cutEffect.Show();
     }
 
     private CuttingResult Cut()

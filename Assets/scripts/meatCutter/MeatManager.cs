@@ -55,15 +55,22 @@ public class MeatManager : MonoBehaviour, KnifeCuttingOut, IGameEndReceiver
     void Update()
     {
         MeatSpecies? selectedMeat = SelectMeat();
+        if (selectedMeat.HasValue) {
+            OnSelectMeat(selectedMeat.Value);
+        }
+    }
+
+    public void OnSelectMeat(MeatSpecies selectedMeat)
+    {
         int defaultMeatPrice = Configurations.Instance.meatPrice;
         float discountRatio = UpgradeApplier.Instance.GetMeatPriceMultiplier();
         int meatPrice = (int)((float)defaultMeatPrice * discountRatio);
-        if (selectedMeat != null && GlobalInfo.Instance.money >= meatPrice)
+        if (GlobalInfo.Instance.money >= meatPrice)
         {
             GlobalInfo.Instance.money -= meatPrice;
             meatSpecies = selectedMeat;
             refrigerators
-                .Where(r => r.meatSpecies == selectedMeat.Value)
+                .Where(r => r.meatSpecies == selectedMeat)
                 .ToList()
                 .ForEach(r => r.Open());
         }

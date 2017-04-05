@@ -15,11 +15,16 @@ public class MeatShooterShooter : MonoBehaviour, IGameEndReceiver {
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetKeyDown(KeyCode.Space))
-		{
-			MeatBullet newPiece = Instantiate(meatPiece, transform.position, Quaternion.identity) as MeatBullet;
-			newPiece.SetMeatPiece(MeatShooter.Instance.meatPiece);
-			newPiece.transform.eulerAngles = transform.eulerAngles;
-			shooterOutput.OnShoot();
-		}
-	}
+        {
+            Shoot();
+        }
+    }
+
+    public void Shoot()
+    {
+        MeatBullet newPiece = Instantiate(meatPiece, transform.position, Quaternion.identity) as MeatBullet;
+        newPiece.SetMeatPiece(MeatShooter.Instance.meatPiece);
+        newPiece.transform.eulerAngles = transform.eulerAngles;
+        shooterOutput.OnShoot();
+    }
 }

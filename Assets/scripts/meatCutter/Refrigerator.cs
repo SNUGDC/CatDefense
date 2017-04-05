@@ -18,4 +18,9 @@ public class Refrigerator : MonoBehaviour {
 		yield return new WaitForSeconds(0.1f);
 		GetComponent<SpriteRenderer>().sprite = original;
 	}
+
+	void OnMouseDown()
+    {
+		FindObjectOfType<MeatManager>().OnSelectMeat(meatSpecies);
+    }
 }
