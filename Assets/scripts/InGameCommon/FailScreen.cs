@@ -6,6 +6,7 @@ public class FailScreen : MonoBehaviour {
 
 	public void GoToRetry()
 	{
+		GlobalInfo.Instance = new GlobalInfo();
 		BackgroundMusic.FadeOutAndChangeScene("Main");
 	}
 
