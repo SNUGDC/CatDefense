@@ -44,7 +44,7 @@ public class BackgroundMusic : MonoBehaviour
 
     private IEnumerator FadeOut()
     {
-        float remainTime = 1.0f;
+        float remainTime = 0.5f;
         AudioSource source = GetComponent<AudioSource>();
         while (remainTime > 0)
         {
