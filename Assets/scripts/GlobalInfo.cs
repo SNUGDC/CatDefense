@@ -35,7 +35,7 @@ public class GlobalInfo
 
     public int currentWave;
 
-    public int GetKnifeUpgradeLevel()
+    public int GetShooterUpgradeLevel()
     {
         return UpgradeLevel[0];
     }

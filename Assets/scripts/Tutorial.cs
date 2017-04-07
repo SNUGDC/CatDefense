@@ -20,9 +20,14 @@ public class Tutorial : MonoBehaviour {
 		{
 			tutorials.ForEach(t => t.SetActive(false));
 			tutorial.SetActive(true);
-			yield return new WaitForSeconds(1.5f);
+			yield return new WaitForSeconds(3f);
 		}
 
+		SceneManager.LoadScene("Main");
+	}
+
+	public void SkipTutorial()
+	{
 		SceneManager.LoadScene("Main");
 	}
 }
