@@ -12,9 +12,9 @@ public class UpgradeApplier : MonoBehaviour {
 	{
 		Instance = this;
 	}
-	public float GetKnifeSpeedMultiplier()
+	public float GetShooterSpeedMultiplier()
 	{
-		return 1.0f + 0.2f * (float)GlobalInfo.Instance.GetKnifeUpgradeLevel();
+		return 1.0f + 0.5f * (float)GlobalInfo.Instance.GetShooterUpgradeLevel();
 	}
 
 	public float GetPerfectJudgementAreaAdded()

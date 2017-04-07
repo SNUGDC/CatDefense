@@ -12,7 +12,7 @@ public class Configurations : MonoBehaviour {
 	public float PerfectReward = 1.3f;
 	public float BadReward = 0.7f;
 
-	public float defaultKnifeSpeed = 6f;
+	public float defaultArrowSpeed = 6f;
 	public int meatPrice = 5;
 
 	public static Configurations Instance;

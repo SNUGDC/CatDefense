@@ -2,15 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ArrowController : MonoBehaviour, IGameEndReceiver {
-
-	public float speed;
-
+public class ArrowController : MonoBehaviour, IGameEndReceiver
+{
 	private bool GoLeft = true;
+	private float defaultSpeed;
+	private float speed;
 
 	// Use this for initialization
-	void Start () {
-		
+	void Start ()
+	{
+		defaultSpeed = Configurations.Instance.defaultArrowSpeed;
+		speed = defaultSpeed * UpgradeApplier.Instance.GetShooterSpeedMultiplier();		
 	}
 	
 	// Update is called once per frame
