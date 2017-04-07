@@ -242,20 +242,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   catResources:
-  - sprite: {fileID: 21300000, guid: 81ecc4502413216459efcf42e47026cf, type: 3}
+  - sprite: {fileID: 21300000, guid: d8de160ec7f2f47a4af2666af6e88cdf, type: 3}
     meatSpecies: 0
-  - sprite: {fileID: 21300000, guid: 20c703458b4d9b84f9460fb31b764a12, type: 3}
+  - sprite: {fileID: 21300000, guid: decc578f02a9d41689f484129d884387, type: 3}
     meatSpecies: 1
-  - sprite: {fileID: 21300000, guid: 0f8888006bf76074e9c2bd68ed047e1c, type: 3}
+  - sprite: {fileID: 21300000, guid: 202ab7b147b3240e5ae8fa771b80d235, type: 3}
     meatSpecies: 2
-  - sprite: {fileID: 21300000, guid: 136670ea28c09f14794cf94ee1331e60, type: 3}
+  - sprite: {fileID: 21300000, guid: e1b05c89785764a619c44fde7bba1212, type: 3}
     meatSpecies: 3
-  - sprite: {fileID: 21300000, guid: 1e38644e6e3ba9742875a8a54a86811c, type: 3}
+  - sprite: {fileID: 21300000, guid: 136670ea28c09f14794cf94ee1331e60, type: 3}
     meatSpecies: 4
   - sprite: {fileID: 21300000, guid: e4198ffd4318d984b8a0a53197964e30, type: 3}
     meatSpecies: 0
-  - sprite: {fileID: 21300000, guid: 8b0d0ca1f36780842a8b6298833b1d74, type: 3}
+  - sprite: {fileID: 21300000, guid: 1baf3ba4175ce4f87b549f3893205422, type: 3}
     meatSpecies: 1
+  - sprite: {fileID: 21300000, guid: 608d4328d64b04f929ab3fb966184205, type: 3}
+    meatSpecies: 2
+  - sprite: {fileID: 21300000, guid: 7d3b2844f48c34edb9807f7c888d1340, type: 3}
+    meatSpecies: 3
+  - sprite: {fileID: 21300000, guid: 84a3915fb2bcb4a758e1ab6215f081d6, type: 3}
+    meatSpecies: 4
   favorite: {fileID: 114512957585944658}
   meatSizeImage: {fileID: 114500977782299102}
   heartEffect: {fileID: 1504752459368788}
