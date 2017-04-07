@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CutEffect : MonoBehaviour {
+	public List<MEventComponent> events;
 	
 	/// <summary>
 	/// Awake is called when the script instance is being loaded.
@@ -14,13 +15,6 @@ public class CutEffect : MonoBehaviour {
 
 	public void Show()
 	{
-		StartCoroutine(ShowCoroutine());
-	}
-
-	IEnumerator ShowCoroutine()
-	{
-		GetComponent<SpriteRenderer>().enabled = true;
-		yield return new WaitForSeconds(0.1f);
-		GetComponent<SpriteRenderer>().enabled = false;
+		events.ForEach(e => e.Fire());
 	}
 }

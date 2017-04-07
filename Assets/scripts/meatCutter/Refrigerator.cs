@@ -2,25 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Refrigerator : MonoBehaviour {
-	public Sprite open;
-	public Sprite original;
-	public MeatSpecies meatSpecies;
+public class Refrigerator : MonoBehaviour
+{
+    public MeatSpecies meatSpecies;
+    public List<MEventComponent> onSelectMeat;
 
-	public void Open()
-	{
-		StartCoroutine(openCoroutine());
-	}
-
-	IEnumerator openCoroutine()
-	{
-		GetComponent<SpriteRenderer>().sprite = open;
-		yield return new WaitForSeconds(0.1f);
-		GetComponent<SpriteRenderer>().sprite = original;
-	}
-
-	void OnMouseDown()
+    public void Open()
     {
-		FindObjectOfType<MeatManager>().OnSelectMeat(meatSpecies);
+        onSelectMeat.ForEach(e => e.Fire());
+    }
+
+    void OnMouseDown()
+    {
+        FindObjectOfType<MeatManager>().OnSelectMeat(meatSpecies);
     }
 }

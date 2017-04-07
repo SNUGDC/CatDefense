@@ -615,6 +615,8 @@ GameObject:
   - component: {fileID: 350336036}
   - component: {fileID: 350336037}
   - component: {fileID: 350336038}
+  - component: {fileID: 350336039}
+  - component: {fileID: 350336040}
   m_Layer: 0
   m_Name: Chicken
   m_TagString: Untagged
@@ -694,9 +696,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 092c1fa3ded024e599637a68baf722fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  open: {fileID: 21300000, guid: 68c64863d9b7ab842b7bc410e8c11770, type: 3}
-  original: {fileID: 21300000, guid: 92b6661656b26b2409d3240eaf64fc8c, type: 3}
   meatSpecies: 4
+  onSelectMeat:
+  - {fileID: 350336039}
+  - {fileID: 350336040}
 --- !u!61 &350336038
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -711,6 +714,31 @@ BoxCollider2D:
   m_Offset: {x: 0.0000038146973, y: 0}
   serializedVersion: 2
   m_Size: {x: 2.34, y: 1.96}
+--- !u!114 &350336039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 350336033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bab025bd6feba43609fd4ec0e92b873e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clip: {fileID: 8300000, guid: b8ee8c57751e95a4aa8bc42e532858ca, type: 3}
+--- !u!114 &350336040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 350336033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a77daba4a53046728051fbc1a197437, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toChange: {fileID: 21300000, guid: 68c64863d9b7ab842b7bc410e8c11770, type: 3}
+  delay: 0.1
 --- !u!1 &455544222
 GameObject:
   m_ObjectHideFlags: 0
@@ -2481,6 +2509,8 @@ GameObject:
   - component: {fileID: 1262511934}
   - component: {fileID: 1262511935}
   - component: {fileID: 1262511936}
+  - component: {fileID: 1262511937}
+  - component: {fileID: 1262511938}
   m_Layer: 0
   m_Name: Salmon
   m_TagString: Untagged
@@ -2560,9 +2590,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 092c1fa3ded024e599637a68baf722fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  open: {fileID: 21300000, guid: 68c64863d9b7ab842b7bc410e8c11770, type: 3}
-  original: {fileID: 21300000, guid: ce6a0e4c92c34f64ea828a5878d0c0f0, type: 3}
   meatSpecies: 2
+  onSelectMeat:
+  - {fileID: 1262511937}
+  - {fileID: 1262511938}
 --- !u!61 &1262511936
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2577,6 +2608,31 @@ BoxCollider2D:
   m_Offset: {x: 0.0000038146973, y: 0}
   serializedVersion: 2
   m_Size: {x: 2.34, y: 1.96}
+--- !u!114 &1262511937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1262511931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bab025bd6feba43609fd4ec0e92b873e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clip: {fileID: 8300000, guid: b8ee8c57751e95a4aa8bc42e532858ca, type: 3}
+--- !u!114 &1262511938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1262511931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a77daba4a53046728051fbc1a197437, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toChange: {fileID: 21300000, guid: 68c64863d9b7ab842b7bc410e8c11770, type: 3}
+  delay: 0.1
 --- !u!1 &1300751586
 GameObject:
   m_ObjectHideFlags: 0
@@ -2710,6 +2766,8 @@ GameObject:
   - component: {fileID: 1324162180}
   - component: {fileID: 1324162181}
   - component: {fileID: 1324162182}
+  - component: {fileID: 1324162183}
+  - component: {fileID: 1324162184}
   m_Layer: 0
   m_Name: Lamb
   m_TagString: Untagged
@@ -2789,9 +2847,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 092c1fa3ded024e599637a68baf722fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  open: {fileID: 21300000, guid: 68c64863d9b7ab842b7bc410e8c11770, type: 3}
-  original: {fileID: 21300000, guid: 14d20ec22ef1b6a4eb6b8f1a76e71b8f, type: 3}
   meatSpecies: 0
+  onSelectMeat:
+  - {fileID: 1324162183}
+  - {fileID: 1324162184}
 --- !u!61 &1324162182
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2806,6 +2865,31 @@ BoxCollider2D:
   m_Offset: {x: 0.0000038146973, y: 0}
   serializedVersion: 2
   m_Size: {x: 2.34, y: 1.96}
+--- !u!114 &1324162183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1324162177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bab025bd6feba43609fd4ec0e92b873e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clip: {fileID: 8300000, guid: b8ee8c57751e95a4aa8bc42e532858ca, type: 3}
+--- !u!114 &1324162184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1324162177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a77daba4a53046728051fbc1a197437, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toChange: {fileID: 21300000, guid: 68c64863d9b7ab842b7bc410e8c11770, type: 3}
+  delay: 0.1
 --- !u!1 &1331925982
 GameObject:
   m_ObjectHideFlags: 0
@@ -3217,6 +3301,8 @@ GameObject:
   - component: {fileID: 1545832880}
   - component: {fileID: 1545832881}
   - component: {fileID: 1545832882}
+  - component: {fileID: 1545832883}
+  - component: {fileID: 1545832884}
   m_Layer: 0
   m_Name: Cow
   m_TagString: Untagged
@@ -3296,9 +3382,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 092c1fa3ded024e599637a68baf722fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  open: {fileID: 21300000, guid: 68c64863d9b7ab842b7bc410e8c11770, type: 3}
-  original: {fileID: 21300000, guid: f3227a8ecc8f0294eb739adcbb6fef7c, type: 3}
   meatSpecies: 3
+  onSelectMeat:
+  - {fileID: 1545832883}
+  - {fileID: 1545832884}
 --- !u!61 &1545832882
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3313,6 +3400,31 @@ BoxCollider2D:
   m_Offset: {x: 0.0000038146973, y: 0}
   serializedVersion: 2
   m_Size: {x: 2.34, y: 1.96}
+--- !u!114 &1545832883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1545832877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bab025bd6feba43609fd4ec0e92b873e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clip: {fileID: 8300000, guid: b8ee8c57751e95a4aa8bc42e532858ca, type: 3}
+--- !u!114 &1545832884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1545832877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a77daba4a53046728051fbc1a197437, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toChange: {fileID: 21300000, guid: 68c64863d9b7ab842b7bc410e8c11770, type: 3}
+  delay: 0.1
 --- !u!1 &1554322450
 GameObject:
   m_ObjectHideFlags: 0
@@ -3419,6 +3531,8 @@ GameObject:
   - component: {fileID: 1572442886}
   - component: {fileID: 1572442887}
   - component: {fileID: 1572442888}
+  - component: {fileID: 1572442891}
+  - component: {fileID: 1572442890}
   m_Layer: 0
   m_Name: cutEffect
   m_TagString: Untagged
@@ -3483,6 +3597,31 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 702aca64d3c4a43aab8f12556556646a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  events:
+  - {fileID: 1572442890}
+--- !u!114 &1572442890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1572442885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79a9932a38714448ebd91a7f07936cba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 0.1
+--- !u!114 &1572442891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1572442885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1a6c2e903c584fee8a33cf3c73bfebe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1583541328
@@ -3907,6 +4046,8 @@ GameObject:
   - component: {fileID: 1815950016}
   - component: {fileID: 1815950017}
   - component: {fileID: 1815950018}
+  - component: {fileID: 1815950019}
+  - component: {fileID: 1815950020}
   m_Layer: 0
   m_Name: Duck
   m_TagString: Untagged
@@ -3986,9 +4127,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 092c1fa3ded024e599637a68baf722fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  open: {fileID: 21300000, guid: 68c64863d9b7ab842b7bc410e8c11770, type: 3}
-  original: {fileID: 21300000, guid: 0f94e147f122e1248a2c3ffd76684c3b, type: 3}
   meatSpecies: 1
+  onSelectMeat:
+  - {fileID: 1815950019}
+  - {fileID: 1815950020}
 --- !u!61 &1815950018
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4003,6 +4145,31 @@ BoxCollider2D:
   m_Offset: {x: 0.0000038146973, y: 0}
   serializedVersion: 2
   m_Size: {x: 2.34, y: 1.96}
+--- !u!114 &1815950019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1815950013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bab025bd6feba43609fd4ec0e92b873e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clip: {fileID: 8300000, guid: b8ee8c57751e95a4aa8bc42e532858ca, type: 3}
+--- !u!114 &1815950020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1815950013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a77daba4a53046728051fbc1a197437, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toChange: {fileID: 21300000, guid: 68c64863d9b7ab842b7bc410e8c11770, type: 3}
+  delay: 0.1
 --- !u!1 &1860365382
 GameObject:
   m_ObjectHideFlags: 0
