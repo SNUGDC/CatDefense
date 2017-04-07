@@ -96,6 +96,7 @@ public class Cat : MonoBehaviour, IGameEndReceiver
             willDestroy = true;
             heartEffect.SetActive(true);
             Destroy(gameObject, 0.5f);
+            Destroy(this);
             float reward = Configurations.Instance.GoodReward;
             if (meatPiece.meatJudgement == CuttingJudgement.Perfect) {
                 float perfectRewardMultiplier = UpgradeApplier.Instance.GetPerfectRewardRatioAdded();
