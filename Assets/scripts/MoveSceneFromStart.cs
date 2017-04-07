@@ -7,6 +7,6 @@ public class MoveSceneFromStart : MonoBehaviour
 {
 	public void ClickStartButton()
 	{
-		SceneManager.LoadScene("Tutorial");
+		BackgroundMusic.FadeOutAndChangeScene("Tutorial");
 	}
 }

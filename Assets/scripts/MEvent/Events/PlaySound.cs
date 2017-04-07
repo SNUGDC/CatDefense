@@ -10,6 +10,7 @@ public class PlaySound : MEventComponent {
     {
 		AudioSource audioSource = GetAudioSource();
         audioSource.clip = clip;
+		audioSource.playOnAwake = false;
 		audioSource.Play();
     }
 
