@@ -1332,6 +1332,7 @@ GameObject:
   - component: {fileID: 686265583}
   - component: {fileID: 686265582}
   - component: {fileID: 686265584}
+  - component: {fileID: 686265585}
   m_Layer: 0
   m_Name: Arrow-OutRight-icon
   m_TagString: Untagged
@@ -1411,6 +1412,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   meatPiece: {fileID: 114890541215750626, guid: affbdc2349ade4617957706573131f35,
     type: 2}
+  onShoot:
+  - {fileID: 686265585}
+--- !u!114 &686265585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 686265580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bab025bd6feba43609fd4ec0e92b873e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clip: {fileID: 8300000, guid: 88f386ae99c8af44b89d0f6a97ed8eea, type: 3}
 --- !u!1 &706663412
 GameObject:
   m_ObjectHideFlags: 0

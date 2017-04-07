@@ -11,6 +11,7 @@ public class MeatShooterShooter : MonoBehaviour, IGameEndReceiver {
 
 	public MeatBullet meatPiece;
 	public ShooterOutput shooterOutput;
+    public List<MEventComponent> onShoot;
 	
 	// Update is called once per frame
 	void Update () {
@@ -22,6 +23,7 @@ public class MeatShooterShooter : MonoBehaviour, IGameEndReceiver {
 
     public void Shoot()
     {
+        onShoot.ForEach(e => e.Fire());
         MeatBullet newPiece = Instantiate(meatPiece, transform.position, Quaternion.identity) as MeatBullet;
         newPiece.SetMeatPiece(MeatShooter.Instance.meatPiece);
         newPiece.transform.eulerAngles = transform.eulerAngles;
